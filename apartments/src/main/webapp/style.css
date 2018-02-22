@@ -1,0 +1,12 @@
+.header img {
+  float: left;
+  width: 1100px;
+  height: 350px;
+  margin: auto;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
