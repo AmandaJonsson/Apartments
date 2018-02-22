@@ -23,3 +23,11 @@
    text-align: center;
 }
 
+.footer p{
+    size: 4px;
+    color: white;
+    margin-bottom: 1em;
+   font-family: "Times New Roman", Times, serif;
+
+}
+
