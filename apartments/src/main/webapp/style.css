@@ -1,0 +1,33 @@
+.header img {
+  float: left;
+  width: 1100px;
+  height: 350px;
+  margin: auto;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+
+.footer { 
+    display: block;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
+.footer p{
+    size: 4px;
+    color: white;
+    margin-bottom: 1em;
+   font-family: "Times New Roman", Times, serif;
+
+}
+
