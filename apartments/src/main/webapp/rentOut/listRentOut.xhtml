@@ -1,17 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<ui:composition template="../template.xhtml" xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">  
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+    
+    <ui:define name="content"> 
+        
+        <c:set var="root" value="#{request.contextPath}" /> 
+        
+        <b:row>
+            <b:column span="12">
+                <h2>Rent Out Apartments</h2>
+            </b:column>
+        </b:row>
+        
+        <b:row>
+            <b:messages/>
+        </b:row>
+        
+        
+        <!-- 
+        <b:row>
+            <b:form id="bookForm">
+                <b:dataTable  
+                    id="bookTable"  
+                    widgetVar="me"
+                    var="b" value="#{bok.findAll()}" span="12" 
+                    striped="true"
+                    page-length-menu="5,10,20"
+                    page-length="5"
+                    onpage="console.log(me); ajax:bok.page()"
+                    >             
+                    <b:dataTableColumn value="#{b.isbn}" order="asc"  />
+                    <b:dataTableColumn value="#{b.title}" />
+                    <b:dataTableColumn value="#{b.genre}" />
+                    <b:dataTableColumn value="#{b.price}" />     
+                    <b:dataTableColumn label="Edit" orderable="false" >
+                        
+                    <h:outputLink value="#{root}/books/edit/#{b.isbn}">Edit</h:outputLink>
+
+                    </b:dataTableColumn>
+                    <b:dataTableColumn label="Delete" orderable="false">
+                        <h:outputLink value="#{root}/books/delete/#{b.isbn}">Delete</h:outputLink>
+
+                    </b:dataTableColumn> 
+                </b:dataTable>
+            </b:form>
+        </b:row>-->
+        
+        
+    </ui:define>
+    
+</ui:composition>
+
+
