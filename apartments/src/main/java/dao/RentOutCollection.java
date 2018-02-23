@@ -43,7 +43,7 @@ public class RentOutCollection extends AbstractQuery<RentOut, String>{
     }
     
     //Oklart om den ska vara såhär? Används den?
-    /*public List<RentOut> findByName(String personName) {
+    public List<RentOut> findByName(String personName) {
         QRentOut rentOut = QRentOut.rentOut;
         JPAQueryFactory qf = new JPAQueryFactory(em);
         List<RentOut> foundName = qf.select(rentOut)
@@ -53,7 +53,7 @@ public class RentOutCollection extends AbstractQuery<RentOut, String>{
         System.out.print(foundName);
         return foundName;
     
-    }*/
+    }
     
     
 }
