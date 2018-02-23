@@ -10,6 +10,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import lombok.EqualsAndHashCode;
 import lombok.Setter;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,7 +18,6 @@ import lombok.NoArgsConstructor;
 /*
 import javax.persistence.Embedded;
 import javax.validation.constraints.Size;
-import lombok.EqualsAndHashCode;
 */
 
 
@@ -25,18 +25,10 @@ import lombok.EqualsAndHashCode;
  * @author tthera
  */
 @NoArgsConstructor
+@EqualsAndHashCode(of = {"id"})
 @Entity
 @Table(name = "rentOut")
 public class RentOut implements Serializable {
-    
-    
-    /*Unikt sätt att hitta lägenheten
-    Adress för lägenheten (adress, postnummer och postadress)
-    Beskrivning av lägenhet
-
-    För- och efternamn på den som hyr ut
-    Telefonnummer för den som hyr ut
-    Mailadress för den som hyr ut*/
 
     
     @Id
@@ -84,7 +76,7 @@ public class RentOut implements Serializable {
     
     /*@Override
     public String toString() {
-        return "Apartment(To rent out){" + "id=" + id + ", "adress=" + adress + ", 
+        return "Apartment(To rent out){" + "id=" + id + ", "adress=" + adress + " 
             description=" + description + ", name=" + name + ", phoneNr=" + phoneNr 
             + ", mail=" + mail + ", image=" + image '}';
     }*/
