@@ -6,7 +6,7 @@
 package control;
 
 /**
- * @author 
+ * @author emilia
  */
 
 public class DatabaseBean {
