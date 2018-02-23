@@ -29,15 +29,15 @@ public abstract class AbstractQuery<TDao, KDao> extends AbstractDAO<TDao, KDao>{
         this.queryObject = queryObject;
     }
     
-   /* public List<TDao> findAll() {
+    public List<TDao> findAll() {
         JPAQueryFactory quaryfactory = new JPAQueryFactory(getEntityManager());
         List<TDao> foundDao = quaryfactory.select(queryObject)
                 .from(queryObject)
                 .fetch();
         return foundDao;
     }
-*/
-  /*  public List<TDao> findRange(int start, int numberRecords) {
+
+    public List<TDao> findRange(int start, int numberRecords) {
         JPAQueryFactory quaryfactory = new JPAQueryFactory(getEntityManager());
         List<TDao> foundDao = quaryfactory.select(queryObject)
                 .from(queryObject)
@@ -46,9 +46,9 @@ public abstract class AbstractQuery<TDao, KDao> extends AbstractDAO<TDao, KDao>{
                 .fetch();
         return foundDao;
     }
-*/
 
- /*   public int count() {
+
+    public int count() {
         JPAQueryFactory quaryfactory = new JPAQueryFactory(getEntityManager());
         return quaryfactory.from(queryObject).fetch().size();
     }
@@ -58,5 +58,5 @@ public abstract class AbstractQuery<TDao, KDao> extends AbstractDAO<TDao, KDao>{
         // delete all customers
         quaryfactory.delete(queryObject).execute();
     }
-*/
+
 }
