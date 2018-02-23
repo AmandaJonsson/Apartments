@@ -16,7 +16,9 @@ import javax.persistence.PersistenceContext;
  * @author tthera
  */
 
+
 //@Stateless
+
 public class RentOutCollection extends AbstractQuery<RentOut, String>{
     
     
@@ -41,7 +43,7 @@ public class RentOutCollection extends AbstractQuery<RentOut, String>{
     }
     
     //Oklart om den ska vara såhär? Används den?
-    public List<RentOut> findByName(String personName) {
+    /*public List<RentOut> findByName(String personName) {
         QRentOut rentOut = QRentOut.rentOut;
         JPAQueryFactory qf = new JPAQueryFactory(em);
         List<RentOut> foundName = qf.select(rentOut)
@@ -50,8 +52,9 @@ public class RentOutCollection extends AbstractQuery<RentOut, String>{
                 .fetch();
         System.out.print(foundName);
         return foundName;
-    
-    }
+
+    }*/
+
     
     
 }
