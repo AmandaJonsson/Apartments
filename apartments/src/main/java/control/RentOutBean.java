@@ -8,7 +8,7 @@ package control;
 import core.RentOut;
 import java.io.Serializable;
 import java.util.List;
-import javax.enterprise.context.SessionScoped;
+//import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 /**
@@ -16,7 +16,7 @@ import javax.inject.Named;
  */
 
 @Named("rentOut")
-@SessionScoped
+//@SessionScoped
 public class RentOutBean implements Serializable {
     
     
