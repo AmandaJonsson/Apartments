@@ -58,6 +58,7 @@
             <type>jar</type>
         </dependency>
         <dependency>
+
             <groupId>org.sonatype.sisu</groupId>
             <artifactId>sisu-inject-bean</artifactId>
             <version>1.4.2</version>
@@ -68,6 +69,11 @@
             <artifactId>javax.ejb-api</artifactId>
             <version>3.2</version>
             <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.gosu-lang.gosu</groupId>
+            <artifactId>gosu-maven-compiler</artifactId>
+            <version>1.14.7</version>
         </dependency>
         <dependency>
             <groupId>javax</groupId>
