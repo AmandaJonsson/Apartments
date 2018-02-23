@@ -29,6 +29,7 @@ public class ApplicationConfig extends Application {
         //resources.add(Apartments.Rest.AuthorResource.class);
         //resources.add(apartments.Rest.CORSFilter.class);
         //resources.add(chl.hajo.library.rest.DatabaseResource.class);
+        resources.add(Rest.RentOutResource.class);
     }
     
 }
