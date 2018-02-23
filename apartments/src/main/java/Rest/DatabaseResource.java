@@ -1,6 +1,9 @@
 package Rest;
 
+
+import Service.DataSupplier;
 import com.google.gson.Gson;
+import core.RentOut;
 import dao.RentOutCollection;
 import javax.ejb.EJB;
 import javax.ws.rs.GET;
