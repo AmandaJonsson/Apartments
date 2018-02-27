@@ -29,7 +29,11 @@ public abstract class AbstractQuery<TDao, KDao> extends AbstractDAO<TDao, KDao>{
         this.queryObject = queryObject;
     }
     
+<<<<<<< HEAD
     public List<TDao> findAll() {
+=======
+   public List<TDao> findAll() {
+>>>>>>> emiliasnewbranch
         JPAQueryFactory quaryfactory = new JPAQueryFactory(getEntityManager());
         List<TDao> foundDao = quaryfactory.select(queryObject)
                 .from(queryObject)

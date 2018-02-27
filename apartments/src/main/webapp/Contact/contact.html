@@ -15,12 +15,21 @@
   <a href="../Help/help.html" class="w3-button w3-bar-item">Help</a>
 </nav>
 
+<script>
+function popUpFunction() {
+    alert("You succesfully sended a message!");
+}
+</script>
+
+
 <!-- Header -->
 <div class="header">
   <img src="A1.png" alt="logo" style="width:100%" />
   <h1>Contact</h1>
  
 </div>
+
+
 
  <!-- Main -->
 
@@ -54,12 +63,38 @@
     </ul>
         
     
+    
+<form id="form" name="form" method="post" action="">
+
+<fieldset style="width: 450px;">
+<legend>Contactform: </legend>
+
+<label for="prenamn">First name:</label> <br />
+<input type="text" name="prennamn" id="fnamn" /> <br />
+
+<label for="lastnamn">Last name:</label> <br />
+<input type="text" name="lastnamn" id="enamn" /> <br />
+
+<label for="epost">Epost:</label> <br />
+<input type="text" name="epost" id="epost" /> <br />
+
+<label for="message">Message:</label> <br />
+<textarea name="meddelande" id="message" cols="47" rows="7"></textarea> <br />
+
+<label for="Send"></label>
+<input type="submit" onclick="popUpFunction()" name="Send" id="Send" value="Send message" />
 
 
+</fieldset>
 
+</form>
+    
+    
+    <p>a </p>
 
+    <p>a</p>
 
-
+    
 
 <!-- footer -->
 <div class= "footer">
