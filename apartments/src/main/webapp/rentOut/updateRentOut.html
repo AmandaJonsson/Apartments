@@ -27,19 +27,35 @@ and open the template in the editor.
             <a href="../rent/listRent.html" class="w3-button w3-bar-item">Rent</a>
             <a href="../rentOut/listRentOut.html" class="w3-button w3-bar-item">Rent out</a>
             <a href="../Contact/contact.html" class="w3-button w3-bar-item">Contact</a>
+            <a href="../Help/help.html" class="w3-button w3-bar-item">Help</a>
         </nav>
         
         <!-- The header with a picture and a h1 -->
         <div class="header">
-          <img src="" alt="logo" style="width:100%" />
+          <img src="A1.png" alt="logo" style="width:100%" />
           <h1>Update the add</h1>
         </div>
         
         <div>
         
-            <p> Update the add and then click on the button Update </p>
-        
-        
+            <p> Update the ad and then click on the button Update </p>
+            
+            
+            <form id="updateform" action="">
+                
+                <input type="text" name="adress"><br>
+                <textarea name="comment" form="updateform"></textarea>
+                <input type="text" name="name"><br>
+                <input type="number" name="phoneNr" min="0" max="12">
+                <input type="email" name="mail">
+                <input type="url" name="image">
+                
+                
+                <input type="button" value="Cancel">
+                <input type="submit">
+                
+            </form>
+
             
             
         </div>
