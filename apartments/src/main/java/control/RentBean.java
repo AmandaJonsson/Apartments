@@ -5,13 +5,10 @@
  */
 package control;
 
-import javax.enterprise.inject.Model;
-
 /**
  * @author 
  */
 
-@Model
 public class RentBean {
     
 }
