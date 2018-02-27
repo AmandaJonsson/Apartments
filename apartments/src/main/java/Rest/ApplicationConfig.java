@@ -26,13 +26,9 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(Rest.CORSFilter.class);
-<<<<<<< HEAD
-        //resources.add(Apartments.Rest.AuthorResource.class);
-        //resources.add(apartments.Rest.CORSFilter.class);
         resources.add(Rest.DatabaseResource.class);
         resources.add(Rest.RentOutResource.class);
-=======
->>>>>>> emiliasnewbranch
+
     }
     
 }
