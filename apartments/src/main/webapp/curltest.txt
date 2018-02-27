@@ -2,7 +2,7 @@
 
 
 # (Re)create database 
-#curl -v http://localhost:8080/ws4/rest/db
+#curl -v http://localhost:8080/apartments/rest/db
 
 # Options (used by CORS preflight)
 curl -v -X OPTIONS http://localhost:8080/
