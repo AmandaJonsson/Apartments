@@ -11,7 +11,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-//import core.QRentOut;
+import core.QRentOut;
 
 
 /**
@@ -19,7 +19,7 @@ import javax.persistence.PersistenceContext;
  */
 
 @Stateless
-public class RentOutCollection //extends AbstractQuery<RentOut, String>
+public class RentOutCollection extends AbstractQuery<RentOut, String>
 {
     
     
@@ -27,18 +27,18 @@ public class RentOutCollection //extends AbstractQuery<RentOut, String>
     private EntityManager em;
     
     
-    //public RentOutCollection() {
-      //  super(RentOut.class, QRentOut.rentOut);
-    //}
+    public RentOutCollection() {
+        super(RentOut.class, QRentOut.rentOut);
+    }
     
     
-  //  @Override
+    @Override
     public EntityManager getEntityManager() {
         return em;
     }
     
     
- //   @Override
+   @Override
     public void setEntityManager(EntityManager em) {
         this.em = em;
     }
