@@ -9,10 +9,16 @@ import com.google.gson.Gson;
 import core.RentOut;
 import dao.RentOutCollection;
 import static java.lang.System.out;
+import java.net.URI;
 import java.util.List;
 import java.util.logging.Logger;
 import javax.ejb.EJB;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -50,6 +56,7 @@ public class RentOutResource {
         }
     }
 
+    
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public Response findAll() {
@@ -59,6 +66,7 @@ public class RentOutResource {
         return Response.ok(gson.toJson(rentOuts)).build();
     }
 
+    
     @GET
     @Produces({MediaType.APPLICATION_JSON + ";charset=utf-8"})
     @Path("count")
@@ -67,9 +75,89 @@ public class RentOutResource {
         return Response.ok(gson.toJson(count)).build();
     }
     
+    @POST
+    @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
+    public Response create(@FormParam("id") String id, @FormParam("adress") String adress,
+            @FormParam("description") String description, @FormParam("name") String name,
+            @FormParam("phoneNr") int phoneNr, @FormParam("mail") String mail,
+            @FormParam("image") String image) {
+        
+        RentOut rentOut = new RentOut(id, adress, description, name, phoneNr, mail, image);
+        rocoll.create(rentOut);
+        URI rentOutUri = uriInfo
+                .getAbsolutePathBuilder()
+                .path(String.valueOf(rentOut.getId()))
+                .build(rentOut);
+        return Response.created(rentOutUri).build();
+    }
+
+    
+    @POST
+    @Consumes({MediaType.APPLICATION_JSON})
+    public Response create(RentOut rentOut) {
+        rocoll.create(rentOut);
+        URI rentOutUri = uriInfo
+                .getAbsolutePathBuilder()
+                .path(String.valueOf(rentOut.getId()))
+                .build(rentOut);
+        // Set it to 201 (created) and setting response header 'Location'
+        // Inspect with cURL
+        return Response.created(rentOutUri).build();
+    }
     
     
+    @DELETE
+    @Path("{isbn : [a-zA-Z0-9]+}")
+    public Response delete(@PathParam("id") String id) {
+        rocoll.delete(id);
+        return Response.noContent().build();
+    }
     
+    
+    @PUT
+    @Path("{isbn : [a-zA-Z0-9]+}")
+    @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
+    public Response update(@FormParam("id") String id, @FormParam("adress") String adress,
+            @FormParam("description") String description, @FormParam("name") String name,
+            @FormParam("phoneNr") int phoneNr, @FormParam("mail") String mail,
+            @FormParam("image") String image) {
+        System.out.println("id " + id);
+        RentOut rentOut = rocoll.find(id);
+        if (rentOut != null) {
+            rentOut.setAdress(adress);
+            rentOut.setDescription(description);
+            rentOut.setName(name);
+            rentOut.setPhoneNr(phoneNr);
+            rentOut.setMail(mail);
+            rentOut.setImage(image);
+            rocoll.update(rentOut);
+            return Response.ok().build();
+        } else {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+    }
+    
+    
+    @PUT
+    @Path("{isbn : [a-zA-Z0-9]+}")
+    @Consumes({MediaType.APPLICATION_JSON})
+    public Response update(RentOut rentOut) {
+        RentOut b = rocoll.find(rentOut.getId());
+        if (b != null) {
+            
+            b.setAdress(rentOut.getAdress());
+            b.setDescription(rentOut.getDescription());
+            b.setName(rentOut.getName());
+            b.setPhoneNr(rentOut.getPhoneNr());
+            b.setMail(rentOut.getMail());
+            b.setImage(rentOut.getImage());
+            
+            rocoll.update(rentOut);
+            return Response.ok().build();
+        } else {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+    }
     
     
 }
