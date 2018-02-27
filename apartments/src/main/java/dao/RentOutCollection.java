@@ -18,9 +18,7 @@ import core.QRentOut;
  * @author tthera
  */
 
-
-//@Stateless
-
+@Stateless
 public class RentOutCollection extends AbstractQuery<RentOut, String>{
     
     
