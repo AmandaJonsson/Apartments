@@ -1,6 +1,7 @@
 package Rest;
 
 
+<<<<<<< HEAD
 import Service.DataSupplier;
 import com.google.gson.Gson;
 import core.RentOut;
@@ -18,6 +19,7 @@ import javax.ws.rs.core.Response;
  */
 
 @Path("db")
+=======
 /*import com.google.gson.Gson;
 import javax.ejb.EJB;
 import javax.ws.rs.Produces;
@@ -32,6 +34,7 @@ import javax.ws.rs.core.Response;*/
  * @author emilia
  */
 //@Path("db")
+>>>>>>> emiliasnewbranch
 public class DatabaseResource {
     
     @EJB
@@ -39,14 +42,15 @@ public class DatabaseResource {
 
     private final Gson gson = new Gson();
 
+<<<<<<< HEAD
     
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public Response recreateDatabase() {
-        //rocoll.clear();
+        rocoll.clear();
         
         for (RentOut ro : DataSupplier.getRentOuts()) {
-          //  rocoll.create(ro);
+            rocoll.create(ro);
         }
         
         return Response.ok(gson.toJson("Database recreated")).build();
@@ -54,6 +58,7 @@ public class DatabaseResource {
     
     
 }
+=======
    /*@EJB
     private final Gson gson = new Gson();
 >>>>>>> emiliasnewbranch
@@ -65,4 +70,4 @@ public class DatabaseResource {
         return Response.ok(gson.toJson("Database recreated")).build();
     }
 */
-
+}
