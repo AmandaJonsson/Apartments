@@ -4,12 +4,9 @@
  * and open the template in the editor.
  */
 package control;
-<<<<<<< HEAD
 
 import javax.enterprise.inject.Model;
 
-=======
->>>>>>> emiliasnewbranch
 /**
  * @author emilia
  */
