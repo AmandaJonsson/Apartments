@@ -1,3 +1,4 @@
+
 package Rest;
 
 import com.google.gson.Gson;
@@ -102,7 +103,7 @@ public class RentOutResource {
     
     
     @DELETE
-    @Path("{isbn : [a-zA-Z0-9]+}")
+    @Path("{id : [a-zA-Z0-9]+}")
     public Response delete(@PathParam("id") String id) {
         rocoll.delete(id);
         return Response.noContent().build();
@@ -110,7 +111,7 @@ public class RentOutResource {
     
     
     @PUT
-    @Path("{isbn : [a-zA-Z0-9]+}")
+    @Path("{id : [a-zA-Z0-9]+}")
     @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
     public Response update(@FormParam("id") String id, @FormParam("adress") String adress,
             @FormParam("description") String description, @FormParam("name") String name,
@@ -134,7 +135,7 @@ public class RentOutResource {
     
     
     @PUT
-    @Path("{isbn : [a-zA-Z0-9]+}")
+    @Path("{id : [a-zA-Z0-9]+}")
     @Consumes({MediaType.APPLICATION_JSON})
     public Response update(RentOut rentOut) {
         RentOut b = rocoll.find(rentOut.getId());

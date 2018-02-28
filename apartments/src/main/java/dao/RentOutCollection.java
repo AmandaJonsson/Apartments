@@ -1,3 +1,4 @@
+
 package dao;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
@@ -18,7 +19,7 @@ public class RentOutCollection extends AbstractQuery<RentOut, String>
 {
     
 
-    @PersistenceContext(unitName ="apartment_persistence")       //Vad ska den heta?
+    @PersistenceContext(unitName ="apartment_persistence")
     private EntityManager em;
     
     
