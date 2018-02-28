@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
@@ -22,7 +17,7 @@ import core.QRentOut;
 public class RentOutCollection extends AbstractQuery<RentOut, String>
 {
     
-    
+  
     @PersistenceContext(unitName ="")       //Vad ska den heta?
     private EntityManager em;
     
@@ -56,5 +51,6 @@ public class RentOutCollection extends AbstractQuery<RentOut, String>
     
     }*/
     
-    
+ 
 }
+

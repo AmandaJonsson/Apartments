@@ -1,25 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 /**
  * @author emilia
- */
+*/
 
 import com.querydsl.core.types.dsl.EntityPathBase;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import java.util.List;
 
-/**
- * Adding general Queries to AbstractDAO 
- * 
- * @param <TDao> Type
- * @param <KDao> Primary key (id)
- * @author hajo
- */
 public abstract class AbstractQuery<TDao, KDao> extends AbstractDAO<TDao, KDao>{
 
     private final EntityPathBase<TDao> queryObject;  // Needed because of QueryDSL

@@ -12,10 +12,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-/**
- * REST Web Service
- * @author
- */
 
 @Path("db")
 /*import com.google.gson.Gson;
@@ -54,6 +50,7 @@ public class DatabaseResource {
     
     
 }
+<<<<<<< HEAD
    /*@EJB
     private final Gson gson = new Gson();
 >>>>>>> emiliasnewbranch
@@ -66,3 +63,5 @@ public class DatabaseResource {
     }
 */
 
+=======
+>>>>>>> Amanda
