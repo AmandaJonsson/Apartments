@@ -13,6 +13,7 @@ public class ApplicationConfig extends Application {
         addRestResourceClasses(resources);
         return resources;
     }
+
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(Rest.CORSFilter.class);
         resources.add(Rest.DatabaseResource.class);

@@ -2,7 +2,7 @@
 
 
 # (Re)create database 
-#curl -v http://localhost:8080/apartments/rest/db
+curl -v http://localhost:8080/apartments/rest/db
 
 # Options (used by CORS preflight)
 curl -v -X OPTIONS http://localhost:8080/
@@ -10,15 +10,15 @@ curl -v -X OPTIONS http://localhost:8080/
 
 
 # Get all notes 
-curl -v -H "Accept: application/json" http://localhost:8080/ws4/rest/author 
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/reOu 
 
 # Get single note
-curl -v -H "Accept: application/json" http://localhost:8080/ws4/rest/author/FF
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/reOu/XXX
 
 
 
 # Get primitive type (number of notes)
-curl -v -H "Accept: application/json" http://localhost:8080/ws4/rest/author/count
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/reOu/count
 
 
 
