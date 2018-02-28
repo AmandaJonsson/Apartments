@@ -50,7 +50,7 @@ public class DatabaseResource {
     
     
 }
-<<<<<<< HEAD
+
    /*@EJB
     private final Gson gson = new Gson();
 >>>>>>> emiliasnewbranch
@@ -63,5 +63,3 @@ public class DatabaseResource {
     }
 */
 
-=======
->>>>>>> Amanda
