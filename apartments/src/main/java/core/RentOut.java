@@ -1,7 +1,7 @@
 package core;
 
 import java.io.Serializable;
-//import javax.enterprise.inject.Model;
+import javax.enterprise.inject.Model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -23,7 +23,7 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @EqualsAndHashCode(of = {"id"})
 @Entity
-//@Model
+@Model
 @Table(name = "rentOut")
 public class RentOut implements Serializable {
 
