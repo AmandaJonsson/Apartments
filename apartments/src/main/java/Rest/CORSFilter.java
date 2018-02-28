@@ -6,10 +6,6 @@ import javax.ws.rs.container.ContainerResponseContext;
 import javax.ws.rs.container.ContainerResponseFilter;
 import javax.ws.rs.ext.Provider;
 
-/**
- *
- * @author hajo
- */
 @Provider
 public class CORSFilter implements ContainerResponseFilter {
 
