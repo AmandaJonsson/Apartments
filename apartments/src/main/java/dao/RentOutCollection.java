@@ -39,7 +39,7 @@ public class RentOutCollection extends AbstractQuery<RentOut, String>
         this.em = em;
     }
     
-    //Oklart om den ska vara såhär? Används den?
+ 
     public List<RentOut> findByName(String personName) {
         QRentOut rentOut = QRentOut.rentOut;
         JPAQueryFactory qf = new JPAQueryFactory(em);
