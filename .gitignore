@@ -32,3 +32,5 @@ nb-configuration.xml
 
 /Apartments/nbproject/private/
 /apartments/target/
+/frontend/nbproject/private/
+node_modules
