@@ -1,7 +1,8 @@
+
 package core;
 
 import java.io.Serializable;
-//import javax.enterprise.inject.Model;
+import javax.enterprise.inject.Model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,22 +12,17 @@ import lombok.Setter;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-/*
-import javax.persistence.Embedded;
-import javax.validation.constraints.Size;
-*/
-
 
 /**
  * @author tthera
  */
+
 @NoArgsConstructor
 @EqualsAndHashCode(of = {"id"})
 @Entity
-//@Model
+@Model
 @Table(name = "rentOut")
 public class RentOut implements Serializable {
-
     
     @Id
     @Column(nullable=false)
@@ -78,5 +74,5 @@ public class RentOut implements Serializable {
             + ", mail=" + mail + ", image=" + image '}';
     }*/
     
-   
+
 }

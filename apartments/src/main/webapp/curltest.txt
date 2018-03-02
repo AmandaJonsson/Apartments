@@ -1,42 +1,47 @@
+Curltests for the backend:
 
 
-
+For all:
 # (Re)create database 
-#curl -v http://localhost:8080/apartments/rest/db
+curl -v http://localhost:8080/apartments/rest/db
 
 # Options (used by CORS preflight)
 curl -v -X OPTIONS http://localhost:8080/
 
 
+For RentOut database:
+# Get all notes (works)
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/reOu 
 
-# Get all notes 
-curl -v -H "Accept: application/json" http://localhost:8080/ws4/rest/author 
-
-# Get single note
-curl -v -H "Accept: application/json" http://localhost:8080/ws4/rest/author/FF
-
-
-
-# Get primitive type (number of notes)
-curl -v -H "Accept: application/json" http://localhost:8080/ws4/rest/author/count
+# Get single note (works)
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/reOu/XX
 
 
 
-# Create new (NOTE: exception if run more times ... use delete) Using form parameters
-curl -v -X POST  http://localhost:8080/ws4/rest/author --data "id=QQ&firstName=Qbert&lastName=Qson&email=qson@mail"
-
-# Create new (NOTE: exception if run more times ... use delete) 
-curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/ws4/rest/author --data '{"id":"XX", "firstName": "Xbert", "lastName": "Xson", "email":"xson@mail, "address" : ""}'
+# Get primitive type (number of notes) (works)
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/reOu/count
 
 
 
-# Update a note 
-curl -v -X PUT -H "Content-Type: application/json" http://localhost:8080/ws4/rest/author/QQ --data '{"id":"QQ", "firstName": "NEWbert", "lastName": "NEWson", "email":"NEW@mail", "address" : ""}'
+# Create new using form parameters (works)
+curl -v -X POST  http://localhost:8080/apartments/rest/reOu --data "id=QQ&adress=vägen12&description=apartment&name=Qbert&phoneNr=0000&mail=qson@mail&image=bild"
 
-# Delete (last part of URL is id)
-curl -v -X DELETE http://localhost:8080/ws4/rest/author/XX 
+# Create new using json (works)
+curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/apartments/rest/reOu --data '{"id":"AA", "adress": "vägA", "description": "lägA", "name":"Abert", "phoneNr" : "1111", "mail":"A@g.com", "image" : "imgA"}'
 
 
+
+# Update a note (works)
+curl -v -X PUT -H "Content-Type: application/json" http://localhost:8080/apartments/rest/reOu/QQ --data '{"id":"QQ", "adress": "vägQ", "description": "lägQ", "name":"Qub", "phoneNr" : "0011", "mail":"Q@g.com", "image" : "imgQ"}'
+
+# Delete (works)
+curl -v -X DELETE http://localhost:8080/apartments/rest/reOu/QQ 
+
+
+
+
+
+For Rent database:
 
 
 

@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     
     <head>
@@ -30,6 +26,7 @@ and open the template in the editor.
             <a href="../Help/help.html" class="w3-button w3-bar-item">Help</a>
         </nav>
         
+        
         <!-- The header with a picture and a h1 -->
         <div class="header">
           <img src="A1.png" alt="logo" style="width:100%" />
@@ -37,7 +34,20 @@ and open the template in the editor.
         </div>
         
         
-        <!-- TODO Lägga till tablellen med listan över RentOut annons  -->
+        <!-- Test för att komma åt de andra sidorna -->
+        <div> 
+            <a href="updateRentOut.html">Update RentOut</a>
+            <a href="deleteRentOut.html">Delete RentOut</a>   
+        </div>
+        
+        
+        <div>
+            <p>Click on the button to add a new ad</p> 
+            <input type="button" value="Add an ad" onclick="window.location.href='addRentOut.html'">
+        </div>
+        
+        
+        <!-- TODO Make the backend hook up to the frontend  -->
         <div>
         
             <form id="rentOutForm">
@@ -53,6 +63,7 @@ and open the template in the editor.
                             <th>Phone nr</th>
                             <th>Mail</th>
                             <th>Image</th>
+                            <th></th>
                         </tr>
                     </thead>
                     
@@ -69,6 +80,7 @@ and open the template in the editor.
                             <th>Phone nr</th>
                             <th>Mail</th>
                             <th>Image</th>
+                            <th></th>
                         </tr>
                     </tfoot>
                     
@@ -81,7 +93,6 @@ and open the template in the editor.
         </div>
         
         
-        
         <div class= "footer">
             <p> Apartments.com is developed by: </p>
             <p> Amanda Jonsson, Emilia Vestlund and Therese Sturesson </p>
@@ -89,6 +100,8 @@ and open the template in the editor.
                     apartments@apartments.com</a></p>
         </div>
         
+        
     </body>
     
 </html>
+
