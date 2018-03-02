@@ -5,8 +5,8 @@
  */
 package dao;
 
-import core.Qrent;
-import core.rent;
+import core.QRent;
+import core.Rent;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  *
  * @author tthera
  */
-public class RentCollection extends AbstractQuery<rent, String>{
+public class RentCollection extends AbstractQuery<Rent, String>{
 
   
     @PersistenceContext(unitName ="")
@@ -23,7 +23,7 @@ public class RentCollection extends AbstractQuery<rent, String>{
     
     
     public RentCollection() {
-        super(rent.class, Qrent.rent);
+        super(Rent.class, QRent.rent);
     }
     
     
