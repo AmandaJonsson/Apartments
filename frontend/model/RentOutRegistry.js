@@ -14,7 +14,9 @@ class RentOutRegistry {
    
    
    constructor() {
-       this.retOuts = [];
+       this.rentOuts = [
+           new RentOut("OO", "oo", "oo", "oo", "11", "o@com", "ollev")
+       ];
     } 
 
 

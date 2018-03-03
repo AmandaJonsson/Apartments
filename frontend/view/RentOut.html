@@ -10,7 +10,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-        <link rel="stylesheet" href="../resources/img/style.css" type="text/css"/>
+        <link rel="stylesheet" href="../resources/css/style.css" type="text/css"/>
         
         <script src="../dist/jquery.min.js"></script>
         <link rel="stylesheet" href="../dist/bootstrap.min.css">
@@ -26,7 +26,7 @@
     
     <body>
         
-        <div class="container">
+        <div > <!-- ska den ha class="cointainer" ? -->
         
             <!-- The navigation bar  -->
             <nav class="w3-bar w3-black">
@@ -46,10 +46,38 @@
 
             <!-- TODO Måste kunna lägga till en ny annons på något sätt -->
 
+            <div class="row">
+                <div class="col-md-12">
+                  <!-- The add author form part -->
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-1">
+                        <span class="label label-info">Add Author</span>
+                      </div>
+                      <div class="col-md-1">
+                        <input id="id" type="text" class="form-control" placeholder="Id">
+                      </div>
+                      <div class="col-md-2">
+                        <input id="firstName" type="text" class="form-control" placeholder="First name">
+                      </div>
+                      <div class="col-md-2">
+                        <input id="lastName" type="text" class="form-control" placeholder="Last name">
+                      </div>
+                      <div class="col-md-2">
+                        <input id="email" type="text" class="form-control" placeholder="Email">
+                      </div>
+                      <div class="col-md-1">
+                        <button id="add" type="button" class="btn btn-primary">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
 
 
-            <div class="">
-                <div class="">
+            <div class="row">
+                <div class="col-md-12">
                     <!-- Here the datatable hooks in -->
                     <table id="rentOut" class="stripe" width="100%">
                         <thead>
@@ -64,9 +92,6 @@
                             </tr>
                         </thead>
 
-                        <tbody>
-                        </tbody>
-
                         <tfoot>
                             <tr>
                                 <th>Id</th>
@@ -79,6 +104,10 @@
                                 <th></th>
                             </tr>
                         </tfoot>
+                        
+                        <tbody>
+                        </tbody>
+                        
                     </table>
                 </div>
             </div>
