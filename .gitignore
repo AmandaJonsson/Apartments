@@ -29,6 +29,7 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+node_modules/
 
 /Apartments/nbproject/private/
 /apartments/target/
