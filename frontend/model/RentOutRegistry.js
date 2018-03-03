@@ -6,7 +6,7 @@ import {
   eventBus as eB
 } from "../util/eventBus.js"
 import {
-  RentOutService
+  rentOutService
 } from "../service/RentOutService.js"
 
 
@@ -26,7 +26,7 @@ class RentOutRegistry {
     
     
     findAll() {
-        RentOutService.findAll(data => {
+        rentOutService.findAll(data => {
           this.rentOuts = data;
           return eB.notify("", data);
         });
@@ -34,14 +34,14 @@ class RentOutRegistry {
     
     
     create(rentOut) {
-        RentOutService.create(rentOut, data => {
+        rentOutService.create(rentOut, data => {
             return eB.notify("ADD", data);
         }); 
     }
     
     
     update(rentOut) {
-        RentOutService.update(rentOut, callback => {
+        rentOutService.update(rentOut, callback => {
             var a = this.find(rentOut.id);
             this.rentOuts = callback;
             eB.notify("UPDATE", this.rentOuts);
@@ -50,7 +50,7 @@ class RentOutRegistry {
     
     
     delete(id) {
-        RentOutService.delete(id, data => {
+        rentOutService.delete(id, data => {
            var a = this.find(id);
            this.rentOuts = this.rentOuts.filter(elem => elem !== a);
            return eB.notify("DELETE", this.rentOuts); 

@@ -12,7 +12,7 @@ class EventBus {
   }
 
   register(observer) {
-    this.observers.push(observer)
+    this.observers.push(observer);
   }
 
   unregister(observer) {

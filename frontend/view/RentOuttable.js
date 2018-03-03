@@ -1,6 +1,6 @@
 
 import {
-  ReOuReg
+  reOuReg
 } from "../model/RentOutRegistry.js"
 
 const columns = [{
@@ -27,7 +27,7 @@ const columns = [{
 ];
 
 $(document).ready(function() {
-  let rentOuts = ReOuReg.findAll();
+  let rentOuts = reOuReg.findAll();
   let table = $('#rentOut').DataTable({
     data: rentOuts,
     columns: columns  // Must be here

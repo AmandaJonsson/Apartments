@@ -2,7 +2,7 @@
 class RentOutService {
     
     constructor() {
-        this.baseUrl = "http://localhost:8080/apartment/rest/rentOut";
+        this.baseUrl = "http://localhost:8080/apartments/rest/reOu";
     }
     
     
@@ -81,4 +81,4 @@ class RentOutService {
   
 }
 
-export const RentOutService = new RentOutService();
+export const rentOutService = new RentOutService();
