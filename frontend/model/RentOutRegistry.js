@@ -14,7 +14,7 @@ class RentOutRegistry {
    
    
    constructor() {
-       this.retOuts = [];
+       this.rentOuts = [];
     } 
 
 
