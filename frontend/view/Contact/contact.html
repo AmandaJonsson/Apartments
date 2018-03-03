@@ -9,8 +9,8 @@
 <!-- Navigation -->
 <nav class="w3-bar w3-black">
   <a href="../../index.html" class="w3-button w3-bar-item">Home</a>
-  <a href="../rent/listRent.html" class="w3-button w3-bar-item">Rent</a>
-  <a href="../rentOut/listRentOut.html" class="w3-button w3-bar-item">Rent out</a>
+  <a href="../Rent.html" class="w3-button w3-bar-item">Rent</a>
+  <a href="../RentOut.html" class="w3-button w3-bar-item">Rent out</a>
   <a href="../Contact/contact.html" class="w3-button w3-bar-item">Contact</a>
   <a href="../Help/help.html" class="w3-button w3-bar-item">Help</a>
 </nav>
@@ -34,7 +34,29 @@ function popUpFunction() {
  <!-- Main -->
 
     <img src="contact.png" style="width:50%" />
+  
+    <nav class="right">
     <p> We are located in Gothenburg</p>
+    
+    
+    <h1> Find us on the map </h1>
+    <div id="map" style="width:400px;height:400px;background:yellow"></div>
+
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.12),
+    zoom: 14,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+};
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABe0Gb5phDKQLHoPE3cXX37zKaviLdljw&callback=myMap"></script>
+    
+   </nav>
+    <article>
     <p> If you call us at 03020-2030 we can help you with </p>
     <ul>
         
@@ -89,7 +111,7 @@ function popUpFunction() {
 
 </form>
     
-
+    </article>
 
     
 
