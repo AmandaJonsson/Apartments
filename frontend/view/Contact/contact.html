@@ -78,7 +78,7 @@ header{
 
  
   <nav class ="twopage">
-  <p> We are located in Gothenburg</p>
+  <p> We are located in Laeso</p>
     
     
     <h1> Find us on the map </h1>
@@ -87,10 +87,15 @@ header{
 <script>
 function myMap() {
 var mapOptions = {
-    center: new google.maps.LatLng(51.5, -0.12),
-    zoom: 14,
+    center: new google.maps.LatLng(57.2, 11),
+    zoom: 10,
     mapTypeId: google.maps.MapTypeId.HYBRID
+    
 };
+    var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(57.2, 11),
+          map: map
+        });
 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
 </script>
@@ -138,7 +143,7 @@ var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     
 <form id="form" name="form" method="post" action="">
 
-<fieldset style="width: 450px;">
+<fieldset style="width: 600px;">
 <legend>Contactform: </legend>
 
 <label for="prenamn">First name:</label> <br />
@@ -150,7 +155,7 @@ var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 <label for="epost">Epost:</label> <br />
 <input type="text" name="epost" id="epost" /> <br />
 
-<label for="message">Message:</label> <br />
+<label for="message" style="width: 400px;">Message:</label> <br />
 <textarea name="meddelande" id="message" cols="47" rows="7"></textarea> <br />
 
 <label for="Send"></label>
