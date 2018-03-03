@@ -7,6 +7,7 @@ package dao;
 
 import core.QRent;
 import core.Rent;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -15,6 +16,7 @@ import javax.persistence.PersistenceContext;
  *
  * @author tthera
  */
+@Stateless
 public class RentCollection extends AbstractQuery<Rent, String>{
 
   
