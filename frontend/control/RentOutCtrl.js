@@ -21,6 +21,18 @@ class Listener {
     }
     
     
+    showEditDeleteModal(rowData) {
+        $("#rid").val(rowData.id);
+        $("#radress").val(rowData.adress);
+        $("#rdescription").val(rowData.description);
+        $("#rname").val(rowData.name);
+        $("#rphoneNr").val(rowData.phoneNr);
+        $("#rmail").val(rowData.mail);
+        $("#rimage").val(rowData.image);
+        $("#editDeleteModal").modal('show');
+    }
+    
+    
     update() {
         //console.log("update");
         let id = $("#rid").val();
@@ -60,4 +72,12 @@ class Listener {
 const listener = new Listener();
 eB.register(listener);
 
-
+$(document).ready(function() {
+    let table = $('#rentOut').dataTable().api();
+    table.on("click", "tbody tr", function(e) {
+      listener.showEditDeleteModal(table.row(this).data());
+    });
+    $("#update").on("click", listener.update);
+    $("#delete").on("click", listener.delete);
+    $("#add").on("click", listener.create);
+});
