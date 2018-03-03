@@ -36,6 +36,10 @@ public class Rent implements Serializable {
     @Getter
     @Setter
     private String description;
+    
+     @Getter
+    @Setter
+    private String mail;
 
     @Getter
     @Setter
@@ -45,17 +49,22 @@ public class Rent implements Serializable {
     @Setter
     private int phoneNr;
 
-    @Getter
-    @Setter
-    private String mail;
+   
 
-    public Rent(String id, String description, String name, int phoneNr, String mail){
+    public Rent(String id, String description, String mail, String name, int phoneNr){
         this.id=id;
         this.description=description;
+        this.mail=mail;
         this.name=name;
         this.phoneNr=phoneNr;
-        this.mail=mail;
 
     }
+    /* A toString method to write out how a rent out ad should look like */
+    @Override
+    public String toString() {
+        return "Apartment(To rent out){" + "id = " + id +  
+            "description=" + description + ", mail = " + mail + ", name = " + name + ", phoneNr = " + phoneNr 
+             + "'}'";
+    } 
 
 }

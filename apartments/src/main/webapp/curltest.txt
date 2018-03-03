@@ -43,6 +43,33 @@ curl -v -X DELETE http://localhost:8080/apartments/rest/reOu/QQ
 
 For Rent database:
 
+# Get all notes (works)
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/re 
+
+# Get single note (works)
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/re/AA
+
+
+
+# Get primitive type (number of notes) (works)
+curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/re/count
+
+
+
+# Create new using form parameters (works)
+curl -v -X POST  http://localhost:8080/apartments/rest/re --data "id=BB&description=Hej&mail=jaha&name=Amanda&phoneNr=7034"
+
+# Create new using json ()
+curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/apartments/rest/re --data '{"id":"CC", "description":"lagenhet", "mail":"A@gma.com", "name":"Emilia", "phoneNr" :"1111"}'
+
+
+# Update a note ()
+curl -v -X PUT -H "Content-Type: application/json" http://localhost:8080/apartments/rest/re/QQ --data '{"id":"BB", "description": "Hejjjjj", "name":"Amanda", "phoneNr" : "7034"}'
+
+# Delete (works)
+curl -v -X DELETE http://localhost:8080/apartments/rest/re/BB 
+
+
 
 
 

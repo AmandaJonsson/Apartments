@@ -81,4 +81,4 @@ class RentOutService {
   
 }
 
-export const rentOutService = new RentOutService();
+export const RentOutService = new RentOutService();
