@@ -85,18 +85,23 @@ header{
     <div id="map" style="width:400px;height:400px;background:yellow"></div>
 
 <script>
+
 function myMap() {
 var mapOptions = {
-    center: new google.maps.LatLng(57.2, 11),
+    center: new google.maps.LatLng(57.2666656, 11.0),
     zoom: 10,
     mapTypeId: google.maps.MapTypeId.HYBRID
     
 };
     var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(57.2, 11),
-          map: map
+          position: new google.maps.LatLng(57.2666656, 11.0),
+          map: map,
+          title: "hello"
         });
 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        marker.setMap(map);
+
+
 }
 </script>
 
