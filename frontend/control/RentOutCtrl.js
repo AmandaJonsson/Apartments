@@ -1,4 +1,5 @@
 
+/* The controller for the rent out html page*/
 
 import {
   reOuReg
@@ -13,16 +14,15 @@ import {
 
 class Listener {
     
-     
-    
-    
+
+    /*  */
     onModelEvent(event, data) {
         var table = $('#rentOut').DataTable();
         table.rows().remove();
         table.rows.add(data).draw();
     }
     
-    
+    /*  */
     showEditDeleteModal(rowData) {
         $("#rid").val(rowData.id);
         $("#radress").val(rowData.adress);
@@ -34,7 +34,7 @@ class Listener {
         $("#editDeleteModal").modal('show');
     }
     
-    
+    /*  */
     update() {
         let id = $("#rid").val();
         let adr = $("#radress").val();
@@ -48,14 +48,14 @@ class Listener {
         $("#editDeleteModal").modal('hide');
     }
     
-    
+    /*  */
     delete() {
         let id = $("#rid").val();
         reOuReg.delete(id);
         $("#editDeleteModal").modal('hide');
     }
     
-    
+    /*  */
     create() {
         let id = $("#id").val();
         let adr = $("#adress").val();
