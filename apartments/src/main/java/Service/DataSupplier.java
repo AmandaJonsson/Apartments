@@ -6,16 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Just to try
- * @author emilia
+ * The class add some data to the tables after you recreate the database
+ * Person responsible for class: Emilia Vestlund
  */
 public class DataSupplier {
 
-
+    /* Adds some data to the rent out table */
     public static List<RentOut> getRentOuts() {
         List<RentOut> rentouts = new ArrayList<>();
         String[] rentoutsString = {
-            "XX, XX, XX, XX, 11, XX, XX"
+            "XX, XX, XX, XX, 11, XX, XX",
+            "YY, YY, YY, YY, 22, YY, YY"
         };
         for (String s : rentoutsString) {
             String[] d = s.split(",");
@@ -25,11 +26,12 @@ public class DataSupplier {
         return rentouts;
     }
     
-    
+    /* Adds some data to the rent table */
     public static List<Rent> getRents() {
         List<Rent> rents = new ArrayList<>();
         String[] rentsString = {
-            "XX, XX, XX, XX, 11"
+            "XX, XX, XX, XX, 11",
+            "YY, YY, YY, YY, 22"
         };
         for (String s : rentsString) {
             String[] d = s.split(",");
@@ -39,6 +41,4 @@ public class DataSupplier {
         return rents;
     }
     
-    
-
 }

@@ -25,7 +25,7 @@ import javax.ws.rs.core.UriInfo;
 
 /**
  * The rest for web service 
- * @author tthera
+ * Person responsible for class: Therese Sturesson
  */
 
 @Path("reOu")
@@ -41,7 +41,7 @@ public class RentOutResource {
     private final Gson gson = new Gson();
 
     
-    /* The method to find a specific rent out ad */
+    /* The method to find a specific rent out ad with json type */
     @GET
     @Path("{id : [a-zA-Z0-9]+}")
     @Produces({MediaType.APPLICATION_JSON})
@@ -55,7 +55,7 @@ public class RentOutResource {
     }
 
     
-    /* The method to find all rent out ads */
+    /* The method to find all rent out ads with json type */
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public Response findAll() {
@@ -66,7 +66,7 @@ public class RentOutResource {
     }
 
     
-    /* The method to count all rent out ads */
+    /* The method to count all rent out ads with json type */
     @GET
     @Produces({MediaType.APPLICATION_JSON + ";charset=utf-8"})
     @Path("count")

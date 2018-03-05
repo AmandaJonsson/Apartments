@@ -1,9 +1,7 @@
 
 package dao;
 
-//import com.querydsl.jpa.impl.JPAQueryFactory;
 import core.RentOut;
-//import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -12,7 +10,7 @@ import core.QRentOut;
 
 /**
  * The RentOut Collection class
- * @author tthera (Therese Sturesson)
+ * Person responsible for class: Therese Sturesson
  */
 
 @Stateless
@@ -44,19 +42,5 @@ public class RentOutCollection extends AbstractQuery<RentOut, String> {
     public void setEntityManager(EntityManager em) {
         this.em = em;
     }
-    
- 
-    /*
-    public List<RentOut> findByName(String personName) {
-        QRentOut rentOut = QRentOut.rentOut;
-        JPAQueryFactory qf = new JPAQueryFactory(em);
-        List<RentOut> foundName = qf.select(rentOut)
-                .from(rentOut)
-                .where(rentOut.name.eq(personName))
-                .fetch();
-        System.out.print(foundName);
-        return foundName;
-    }
-    */
     
 }
