@@ -13,6 +13,8 @@ import {
 
 class Listener {
     
+     
+    
     
     onModelEvent(event, data) {
         var table = $('#rentOut').DataTable();
