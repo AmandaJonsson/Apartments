@@ -7,10 +7,8 @@ package dao;
 
 import core.QRent;
 import core.Rent;
-<<<<<<< HEAD
-=======
+
 import javax.ejb.Stateless;
->>>>>>> emilias-feature-fancy
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -19,10 +17,8 @@ import javax.persistence.PersistenceContext;
  *
  * @author tthera
  */
-<<<<<<< HEAD
-=======
+
 @Stateless
->>>>>>> emilias-feature-fancy
 public class RentCollection extends AbstractQuery<Rent, String>{
 
   
