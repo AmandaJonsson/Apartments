@@ -5,30 +5,164 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <link rel="stylesheet" href="/../resources/css/style.css" type="text/css"/>
 
+        <script src="../dist/jquery.min.js"></script>
+        <link rel="stylesheet" href="../dist/bootstrap.min.css">
+        <script src="../dist/bootstrap.min.js"></script>
+        <script src="../dist/jquery.dataTables.js"></script>
+        <link rel="stylesheet" href="../dist/css/jquery.dataTables.css">
+
+        <script type="module" src="./Renttable.js"></script>
+        <script type="module" src="../control/RentCtrl.js"></script>
+      
 <body>
 <!-- Navigation -->
 <nav class="w3-bar w3-black">
   <a href="../index.html" class="w3-button w3-bar-item">Home</a>
   <a href="Rent.html" class="w3-button w3-bar-item">Rent</a>
   <a href="RentOut.html" class="w3-button w3-bar-item">Rent out</a>
-  <a href="/Contact/contact.html" class="w3-button w3-bar-item">Contact</a>
+  <a href="/view/Contact/contact.html" class="w3-button w3-bar-item">Contact</a>
   <a href="/Help/help.html" class="w3-button w3-bar-item">Help</a>
 </nav>
 
 <!-- Header -->
 <div class="header">
-  <img src="A1.png" alt="logo" style="width:100%" />
+  <img src="/../resources/img/A1.png" alt="logo" style="width:100%" />
   <h1>Rent</h1>
 </div>
+
+<div class="row">
+                <div class="col-md-12">
+                  <!-- The add author form part -->
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-1">
+                        <span class="label label-info">Add a rent advertisement</span>
+                      </div>
+                      <div class="col-md-1">
+                        <input id="id" type="text" class="form-control" placeholder="Id">
+                      </div>
+                      <div class="col-md-2">
+                        <input id="description" type="text" class="form-control" placeholder="Desciption">
+                      </div>
+                      <div class="col-md-2">
+                        <input id="mail" type="text" class="form-control" placeholder="Email">
+                      </div>
+                      <div class="col-md-2">
+                        <input id="name" type="text" class="form-control" placeholder="Name">
+                      </div>
+                        <div class="col-md-2">
+                        <input id="phoneNr" type="text" class="form-control" placeholder="Phone Number">
+                      </div>
+                      <div class="col-md-1">
+                        <button id="add" type="button" class="btn btn-primary">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Here the datatable hooks in -->
+                    <table id="rent" class="stripe" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Description</th>
+                                <th>Mail</th>
+                                <th>Name</th>
+                                <th>Phone nr</th>
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+                            <tr>
+                                <th>Id</th>
+                                <th>Description</th>
+                                <th>Mail</th>
+                                <th>Name</th>
+                                <th>Phone nr</th>
+                            </tr>
+                        </tfoot>
+                        
+                        <tbody>
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+
+
+ <div id="editDeleteModal" class="modal fade">
+                
+                <div class="modal-dialog">
+                    
+                    <div class="modal-content">
+                        
+                        <div class="modal-header">
+                            
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Update or Delete?</h4>
+                            
+                        </div>
+                        
+                        <div class="modal-body">
+                            
+                            <form>
+                                
+                                <div class="form-group">
+                                    
+                                    <input id="rid" type="text" disabled="true" />
+                                    
+                                </div>
+                                
+                                <div class="form-group">
+                                    
+                                    <input id="rdescription" type="text" />
+                                    
+                                </div>
+                                
+                                <div class="form-group">
+                                    
+                                    <input id="rmail" type="text" />
+                                    
+                                </div>
+                                
+                                <div class="form-group">
+                                    
+                                    <input id="rname" type="text" />
+                                    
+                                </div>
+                                
+                                <div class="form-group">
+                                    
+                                    <input id="rphoneNr" type="text" />
+                                    
+                                </div>
+                                
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                <button id="update" type="button" class="btn btn-primary">Update</button>
+                                <button id="delete" type="button" class="btn btn-danger">Delete</button>
+                                
+                            </form>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="modal-footer">
+                    </div>
+                    
+                </div>
+                
+            </div>
 <!-- footer -->
 
 <div class= "footer">
     <p> Apartments.com is developed by: 
         Amanda Jonsson,  Emilia Vestlund and Therese Sturesson. </p><p>
     Contact information: <a href="mailto:apatments@apartments.com">
-            apartments@apartments.com</a></p>
-  
-    
+            apartments@apartments.com</a></p>  
 </div>
 
 </body>

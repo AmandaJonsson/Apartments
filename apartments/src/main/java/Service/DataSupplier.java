@@ -33,7 +33,7 @@ public class DataSupplier {
         };
         for (String s : rentsString) {
             String[] d = s.split(",");
-            Rent R = new Rent(d[0], d[1], d[2], d[3], 2);
+            Rent R = new Rent(d[0], d[1], d[2], d[3], Integer.parseInt(d[4]));
             rents.add(R);
         }
         return rents;

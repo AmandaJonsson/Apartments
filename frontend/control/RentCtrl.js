@@ -40,6 +40,8 @@ class Listener {
         let pho = $("#rphoneNr").val();
         let re = new Rent(id, des, mail, name, pho);
         reReg.update(re);
+        $("#editDeleteModal").modal('hide');
+
     }
     
     
@@ -47,16 +49,17 @@ class Listener {
         //console.log("delete");
         let id = $("#rid").val();
         reReg.delete(id);
+        $("#editDeleteModal").modal('hide');
     }
     
     
     create() {
         //console.log("create");
-        let id = $("#rid").val();
-        let des = $("#rdescription").val();
-        let mail = $("#rmail").val();
-        let name = $("#rname").val();
-        let pho = $("#rphoneNr").val();
+        let id = $("#id").val();
+        let des = $("#description").val();
+        let mail = $("#mail").val();
+        let name = $("#name").val();
+        let pho = $("#phoneNr").val();
         let re = new Rent(id, des, mail, name, pho);
         reReg.create(re);
     }

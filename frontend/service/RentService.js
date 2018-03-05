@@ -2,7 +2,7 @@
 class RentService {
     
     constructor() {
-        this.baseUrl = "http://localhost:8080/apartment/rest/rent";
+        this.baseUrl = "http://localhost:8080/apartments/rest/re";
     }
     
     
