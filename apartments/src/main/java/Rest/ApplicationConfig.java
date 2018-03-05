@@ -18,6 +18,7 @@ public class ApplicationConfig extends Application {
         resources.add(Rest.CORSFilter.class);
         resources.add(Rest.DatabaseResource.class);
         resources.add(Rest.RentOutResource.class);
+        resources.add(Rest.RentResource.class);
 
     }
     

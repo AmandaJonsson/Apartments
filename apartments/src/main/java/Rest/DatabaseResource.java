@@ -3,7 +3,9 @@ package Rest;
 
 import Service.DataSupplier;
 import com.google.gson.Gson;
+import core.Rent;
 import core.RentOut;
+import dao.RentCollection;
 import dao.RentOutCollection;
 import javax.ejb.EJB;
 import javax.ws.rs.GET;
@@ -32,6 +34,9 @@ public class DatabaseResource {
     
     @EJB
     private RentOutCollection rocoll;
+    
+    @EJB
+    private RentCollection rcoll;
 
     private final Gson gson = new Gson();
 
@@ -39,27 +44,18 @@ public class DatabaseResource {
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public Response recreateDatabase() {
-        //rocoll.clear();
+        rocoll.clear();
+        rcoll.clear();
         
         for (RentOut ro : DataSupplier.getRentOuts()) {
-          //  rocoll.create(ro);
+            rocoll.create(ro);
+        }
+        
+        for(Rent r : DataSupplier.getRents()){
+            rcoll.create(r);
         }
         
         return Response.ok(gson.toJson("Database recreated")).build();
     }
-    
-    
+     
 }
-
-   /*@EJB
-    private final Gson gson = new Gson();
->>>>>>> emiliasnewbranch
-
-    @GET
-    @Produces({MediaType.APPLICATION_JSON})
-    public Response recreateDatabase() {
-        
-        return Response.ok(gson.toJson("Database recreated")).build();
-    }
-*/
-

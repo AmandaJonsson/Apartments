@@ -24,6 +24,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
 /**
+ * The rest for web service 
  * @author tthera
  */
 
@@ -40,6 +41,7 @@ public class RentOutResource {
     private final Gson gson = new Gson();
 
     
+    /* The method to find a specific rent out ad */
     @GET
     @Path("{id : [a-zA-Z0-9]+}")
     @Produces({MediaType.APPLICATION_JSON})
@@ -53,6 +55,7 @@ public class RentOutResource {
     }
 
     
+    /* The method to find all rent out ads */
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public Response findAll() {
@@ -63,6 +66,7 @@ public class RentOutResource {
     }
 
     
+    /* The method to count all rent out ads */
     @GET
     @Produces({MediaType.APPLICATION_JSON + ";charset=utf-8"})
     @Path("count")
@@ -71,6 +75,8 @@ public class RentOutResource {
         return Response.ok(gson.toJson(count)).build();
     }
     
+    
+    /* The method to create a new rent out ad with the form method */
     @POST
     @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
     public Response create(@FormParam("id") String id, @FormParam("adress") String adress,
@@ -88,6 +94,7 @@ public class RentOutResource {
     }
 
     
+    /* The method to create a new rent out ad with the json method */
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     public Response create(RentOut rentOut) {
@@ -96,12 +103,11 @@ public class RentOutResource {
                 .getAbsolutePathBuilder()
                 .path(String.valueOf(rentOut.getId()))
                 .build(rentOut);
-        // Set it to 201 (created) and setting response header 'Location'
-        // Inspect with cURL
         return Response.created(rentOutUri).build();
     }
     
     
+    /* The method to delete a rent out ad */
     @DELETE
     @Path("{id : [a-zA-Z0-9]+}")
     public Response delete(@PathParam("id") String id) {
@@ -110,6 +116,7 @@ public class RentOutResource {
     }
     
     
+    /* The method to update a rent out ad with the form method */
     @PUT
     @Path("{id : [a-zA-Z0-9]+}")
     @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
@@ -134,6 +141,7 @@ public class RentOutResource {
     }
     
     
+    /* The method to update a rent out ad with the json method */
     @PUT
     @Path("{id : [a-zA-Z0-9]+}")
     @Consumes({MediaType.APPLICATION_JSON})

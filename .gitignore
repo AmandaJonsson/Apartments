@@ -33,3 +33,7 @@ node_modules/
 /Apartments/nbproject/private/
 /apartments/target/
 /frontend/nbproject/private/
+<<<<<<< HEAD
+=======
+node_modules
+>>>>>>> emilias-feature-fancy

@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 
 
 /**
+ * The core file for rent out 
  * @author tthera
  */
 
@@ -24,6 +25,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "rentOut")
 public class RentOut implements Serializable {
     
+    
+    /* The variables with getters och setters */
     @Id
     @Column(nullable=false)
     @Getter
@@ -55,6 +58,7 @@ public class RentOut implements Serializable {
     private String image;
     
     
+    /* The constructor for the rent out class */
     public RentOut (String id, String adress, String description, String name,
             int phoneNr, String mail, String image) {
     this.id = id;
@@ -67,12 +71,12 @@ public class RentOut implements Serializable {
     }
     
     
-    /*@Override
+    /* A toString method to write out how a rent out ad should look like */
+    @Override
     public String toString() {
-        return "Apartment(To rent out){" + "id=" + id + ", "adress=" + adress + " 
-            description=" + description + ", name=" + name + ", phoneNr=" + phoneNr 
-            + ", mail=" + mail + ", image=" + image '}';
-    }*/
-    
+        return "Apartment(To rent out){" + "id = " + id + ", adress = " + adress +  
+            "description=" + description + ", name = " + name + ", phoneNr = " + phoneNr 
+            + ", mail = " + mail + ", image = " + image +"'}'";
+    }   
 
 }
