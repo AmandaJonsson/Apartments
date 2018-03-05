@@ -21,7 +21,6 @@ class RentOutService {
     
     
     create(rentOut, callback) {
-        //console.log(rentOut);
         window.$.ajax({
             url: this.baseUrl,
             data: rentOut, 
