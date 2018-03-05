@@ -34,7 +34,6 @@ class Listener {
     
     
     update() {
-        //console.log("update");
         let id = $("#rid").val();
         let adr = $("#radress").val();
         let des = $("#rdescription").val();
@@ -44,25 +43,25 @@ class Listener {
         let img = $("#rimage").val();
         let reOu = new RentOut(id, adr, des, name, pho, mail, img);
         reOuReg.update(reOu);
+        $("#editDeleteModal").modal('hide');
     }
     
     
     delete() {
-        //console.log("delete");
         let id = $("#rid").val();
         reOuReg.delete(id);
+        $("#editDeleteModal").modal('hide');
     }
     
     
     create() {
-        //console.log("create");
-        let id = $("#rid").val();
-        let adr = $("#radress").val();
-        let des = $("#rdescription").val();
-        let name = $("#rname").val();
-        let pho = $("#rphoneNr").val();
-        let mail = $("#rmail").val();
-        let img = $("#rimage").val();
+        let id = $("#id").val();
+        let adr = $("#adress").val();
+        let des = $("#description").val();
+        let name = $("#name").val();
+        let pho = $("#phoneNr").val();
+        let mail = $("#mail").val();
+        let img = $("#image").val();
         let reOu = new RentOut(id, adr, des, name, pho, mail, img);
         reOuReg.create(reOu);
     }

@@ -19,7 +19,7 @@ public class DataSupplier {
         };
         for (String s : rentoutsString) {
             String[] d = s.split(",");
-            RentOut RO = new RentOut(d[0], d[1], d[2], d[3], 2, d[5], d[6]);
+            RentOut RO = new RentOut(d[0], d[1], d[2], d[3], Integer.parseInt(d[4]), d[5], d[6]);
             rentouts.add(RO);
         }
         return rentouts;
