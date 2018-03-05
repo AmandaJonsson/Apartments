@@ -13,14 +13,7 @@ import {
 
 class Listener {
     
-     TableActions (value, row, index) {
-            return [
-                '<a class="like" href="javascript:void(0)" title="Edit">',
-                '<i class="glyphicon glyphicon-pencil"></i>',
-                '</a> '
-            ].join('');
-        }
-    
+     
     
     
     onModelEvent(event, data) {
