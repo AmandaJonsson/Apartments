@@ -89,12 +89,10 @@ td {
 }
 
 
-
-
-.button {
+.blue button {
   display: inline-block;
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: #3116B4;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -106,14 +104,14 @@ td {
   margin: 5px;
 }
 
-.button span {
+.blue button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.button span:after {
+.blue button span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -122,11 +120,11 @@ td {
   transition: 0.5s;
 }
 
-.button:hover span {
+.blue button:hover span {
   padding-right: 25px;
 }
 
-.button:hover span:after {
+.blue button:hover span:after {
   opacity: 1;
   right: 0;
 }
