@@ -28,7 +28,13 @@
 
 }
 
+.pToRight {
+    margin: 0 0 0 15px;
+}
 
+.divToRight {
+    margin: 0 0 0 15px;
+}
 
 /* The actual popup (appears on top) */
 .popup .popuptext {
