@@ -13,14 +13,14 @@ To change this template file, choose Tools | Templates and open the template in 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
         <link rel="stylesheet" href="../../resources/css/style.css" type="text/css"/>
         
-        <script src="../../dist/jquery.min.js"></script>
-        <link rel="stylesheet" href="../../dist/bootstrap.min.css">
-        <script src="../../dist/bootstrap.min.js"></script>
-        <script src="../../dist/jquery.dataTables.js"></script>
-        <link rel="stylesheet" href="../../dist/css/jquery.dataTables.css">
+        <script src="../dist/jquery.min.js"></script>
+        <link rel="stylesheet" href="../dist/bootstrap.min.css">
+        <script src="../dist/bootstrap.min.js"></script>
+        <script src="../dist/jquery.dataTables.js"></script>
+        <link rel="stylesheet" href="../dist/css/jquery.dataTables.css">
         
-        <script type="module" src="../RentOuttable.js"></script>
-        <script type="module" src="../../control/RentOutCtrl.js"></script>    
+        <script type="module" src="RentOuttable.js"></script>
+        <script type="module" src="../control/RentOutCtrl.js"></script>    
     </head>
     
     
@@ -42,23 +42,22 @@ To change this template file, choose Tools | Templates and open the template in 
         
 
         
-        <div>
+        <div class="divToRight">
             
             <p>Add a new ad by filling in the form and click on the Add button</p>
-            
             
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                         <div class="row">
 
-                            <p>The id on the apartment:</p>
+                            <p class="pToRight">The id on the apartment:</p>
                             <div class="col-md-1">
                                 <input id="id" type="text" class="form-control" placeholder="Id" required>
                             </div>
                             <br><br>
 
-                            <p>The address and the description on the apartment you are renting out:</p>
+                            <p class="pToRight">The address and the description on the apartment you are renting out:</p>
                             <div class="col-md-2">
                                 <input id="adress" type="text" class="form-control" placeholder="Address">
                             </div>
@@ -68,7 +67,7 @@ To change this template file, choose Tools | Templates and open the template in 
                             </div>
                             <br><br>
 
-                            <p>Contact information: </p>
+                            <p class="pToRight">Contact information: </p>
                             <div class="col-md-2">
                                 <input id="name" type="text" class="form-control" placeholder="Name">
                             </div>
@@ -82,7 +81,7 @@ To change this template file, choose Tools | Templates and open the template in 
                             </div>
                             <br><br>
 
-                            <p>An URL link to picture on the apartment</p>
+                            <p class="pToRight">An URL link to picture on the apartment</p>
                             <div class="col-md-2">
                                 <input id="image" type="text" class="form-control" placeholder="Image URL">
                             </div>
