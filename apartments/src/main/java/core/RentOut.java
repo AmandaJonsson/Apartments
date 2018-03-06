@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * The core file for rent out 
- * @author tthera
+ * Person responsible for class: Therese Sturesson
  */
 
 @NoArgsConstructor

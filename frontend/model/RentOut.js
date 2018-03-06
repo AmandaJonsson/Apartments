@@ -1,6 +1,9 @@
 
+/* The model for the rent Out class */
+
 export class RentOut {
     
+    /* The constructor for the class */
     constructor (id, adress, description, name, phoneNr, mail, image) {
         this.id = id;
         this.adress = adress;

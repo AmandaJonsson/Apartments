@@ -1,5 +1,5 @@
-package Rest;
 
+package Rest;
 
 import Service.DataSupplier;
 import com.google.gson.Gson;
@@ -14,22 +14,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-
-@Path("db")
-/*import com.google.gson.Gson;
-import javax.ejb.EJB;
-import javax.ws.rs.Produces;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;*/
-
 /**
  * REST Web Service
- *
- * @author emilia
+ * Person responsible for class: Emilia Vestlund
  */
-//@Path("db")
+
+@Path("db")
 public class DatabaseResource {
     
     @EJB
