@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-mar-06, 10:15:16
+    Author     : Emilia
+*/
+
+
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+nav.twopage {
+    float: left;
+    max-width: 230px;
+    margin: 1;
+    padding: 2em;
+}
+
+nav.twopage ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav.twopage ul a {
+    text-decoration: none;
+    
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+header{
+    text-align: center;
+}
