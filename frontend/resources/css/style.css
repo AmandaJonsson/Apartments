@@ -104,7 +104,7 @@ td {
   text-align: center;
   font-size: 28px;
   padding: 20px;
-  width: 200px;
+  width: 300px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -134,3 +134,36 @@ td {
   opacity: 1;
   right: 0;
 }
+
+
+div.contact nav.twopage {
+    width: 50%;
+    float: left;
+    margin: 1;
+    padding: 2em;
+    
+}
+
+div.contact nav.twopage ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+div.contact nav.twopage ul a {
+    text-decoration: none;
+    
+}
+
+div.contact article img {
+    margin-left: 20 px;
+}
+div.contact article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 5em;
+    overflow: hidden;
+}
+div.contact .header{
+    text-align: center;
+}
+
