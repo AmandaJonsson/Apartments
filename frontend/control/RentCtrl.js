@@ -1,5 +1,3 @@
-
-
 import {
   reReg
 } from "../model/RentRegistry.js"
@@ -10,17 +8,20 @@ import {
   eventBus as eB
 } from "../util/eventBus.js"
 
-
+/**
+ * The controller for the rent html page. Handles events.
+ * Person responsible for class: Amanda Jonsson
+ */
 class Listener {
     
-    
+    //Handle events from model
     onModelEvent(event, data) {
         var table = $('#rent').DataTable();
         table.rows().remove();
         table.rows.add(data).draw();
     }
     
-    
+    //Handle events from the gui, shows the pop up window
     showEditDeleteModal(rowData) {
         $("#rid").val(rowData.id);
         $("#rdescription").val(rowData.description);
@@ -30,7 +31,7 @@ class Listener {
         $("#editDeleteModal").modal('show');
     }
     
-    
+    //Handle events from the gui, update a rent
     update() {
         let id = $("#rid").val();
         let des = $("#rdescription").val();
@@ -42,16 +43,18 @@ class Listener {
         $("#editDeleteModal").modal('hide');
     }
     
-    
+    //Handle events from the gui, delete a rent
     delete() {
         let id = $("#rid").val();
         reReg.delete(id);
         $("#editDeleteModal").modal('hide');
     }
     
-    
+
+    //Handle events from the gui, create a rent
     create(e) {
         e.preventDefault();
+        //console.log("create");
         let id = $("#id").val();
         let des = $("#description").val();
         let mail = $("#mail").val();

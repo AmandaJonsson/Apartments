@@ -1,11 +1,14 @@
-
+/**
+ * The service to execute AJAX call to backend
+ * Person responsible for class: Amanda Jonsson
+ */
 class RentService {
     
     constructor() {
         this.baseUrl = "http://localhost:8080/apartments/rest/re";
     }
     
-    
+    //executes a GET AJAX call to backend
     findAll(callback) {
         window.$.ajax({
             url: this.baseUrl,
@@ -19,7 +22,7 @@ class RentService {
         });
     }
     
-    
+    // executes a POST AJAX call to the backend
     create(rent, callback) {
         //console.log(rentOut);
         window.$.ajax({
@@ -36,7 +39,7 @@ class RentService {
         });
     }
     
-    
+    // executes a GET AJAX call to the backend
     find(id, callback) {
         $.ajax({
             url: this.baseUrl + "/" + id,
@@ -49,7 +52,7 @@ class RentService {
         });
     }
     
-    
+    // executes a DELETE AJAX call to the backend
     delete(id, callback) {
         window.$.ajax({
               url: this.baseUrl + "/" + id,
@@ -63,7 +66,7 @@ class RentService {
         });
     }
     
-    
+   // executes a PUT AJAX call to the backend
     update(rent, callback) {
         window.$.ajax({
               url: this.baseUrl + "/" + rent.id,

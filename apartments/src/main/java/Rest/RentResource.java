@@ -1,4 +1,3 @@
-
 package Rest;
 
 import com.google.gson.Gson;
@@ -25,7 +24,7 @@ import javax.ws.rs.core.UriInfo;
 
 /**
  * The rest for web service 
- * @author tthera
+ * Person responsible for class: Amanda Jonsson 
  */
 
 @Path("re")

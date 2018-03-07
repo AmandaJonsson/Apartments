@@ -189,3 +189,6 @@ div.contact .header{
     text-align: center;
 }
 
+label {
+    vertical-align: top;
+}
