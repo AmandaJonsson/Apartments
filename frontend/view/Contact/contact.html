@@ -19,17 +19,20 @@
 
 <script>
 function sendForm() {
-    var name=document.forms["form"]["prename"].value;
-        var lastname=document.forms["form"]["lastname"].value;
-        var epost=document.forms["form"]["epost"].value;
-        var message=document.forms["form"]["meddelande"].value;
-        if (name==null || lastname=="",epost==null || message=="",lastname==null || name=="",message==null || epost=="")
-        {
-            alert("Please Fill All Required Field");
-            return false;
-        } else{
+        
+        //var name=document.forms["form"]["prename"].value;
+        //var lastname=document.forms["form"]["lastname"].value;
+        //var epost=document.forms["form"]["epost"].value;
+        //var message=document.forms["form"]["meddelande"].value;
+        //if (name==null || lastname=="",epost==null || message=="",lastname==null || name=="",message==null || epost=="")
+        //{
+          //  alert("Please Fill All Required Field");
+            //return false;
+        //} else{
+            
+  
         alert ("You sended a message");
-    }
+    
         
 }
 </script>
@@ -118,7 +121,7 @@ var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     
     
     
-<form id="form" name="form" method="post" action="">
+<form id="form" name="form" action="">
 
 <fieldset style="width: 600px;">
 <legend>Contactform: </legend>
@@ -136,7 +139,7 @@ var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 <textarea name="meddelande" id="emessage" cols="47" rows="7" required></textarea> <br />
 
 <label for="Send"></label>
-<input type="submit" onsubmit="return sendForm()" name="Send" id="Send" value="Send message" />
+<button onclick="return sendForm()" name="Send" id="Send" value="Send message" /> Send this </button>
 
 
 </fieldset>
