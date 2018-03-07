@@ -24,7 +24,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
 /**
- * The rest for web service 
+ * The rest backend for web service 
  * Person responsible for class: Therese Sturesson
  */
 
@@ -41,7 +41,8 @@ public class RentOutResource {
     private final Gson gson = new Gson();
 
     
-    /* The method to find a specific rent out ad with json type */
+    /* The method to find a specific rent out ad with json type 
+       Sends the data to RentOutCollections find method*/
     @GET
     @Path("{id : [a-zA-Z0-9]+}")
     @Produces({MediaType.APPLICATION_JSON})
@@ -55,7 +56,8 @@ public class RentOutResource {
     }
 
     
-    /* The method to find all rent out ads with json type */
+    /* The method to find all rent out ads with json type 
+       Sends the data to RentOutCollections findAll method*/
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     public Response findAll() {
@@ -66,7 +68,8 @@ public class RentOutResource {
     }
 
     
-    /* The method to count all rent out ads with json type */
+    /* The method to count all rent out ads with json type 
+       Sends the data to RentOutCollections count method*/
     @GET
     @Produces({MediaType.APPLICATION_JSON + ";charset=utf-8"})
     @Path("count")
@@ -76,7 +79,8 @@ public class RentOutResource {
     }
     
     
-    /* The method to create a new rent out ad with the form method */
+    /* The method to create a new rent out ad with the form method 
+       Sends the data to RentOutCollections create method with form*/
     @POST
     @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
     public Response create(@FormParam("id") String id, @FormParam("adress") String adress,
@@ -94,7 +98,8 @@ public class RentOutResource {
     }
 
     
-    /* The method to create a new rent out ad with the json method */
+    /* The method to create a new rent out ad with the json method 
+       Sends the data to RentOutCollections create method with json*/
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
     public Response create(RentOut rentOut) {
@@ -107,7 +112,8 @@ public class RentOutResource {
     }
     
     
-    /* The method to delete a rent out ad */
+    /* The method to delete a rent out ad 
+       Sends the data to RentOutCollections delete method*/
     @DELETE
     @Path("{id : [a-zA-Z0-9]+}")
     public Response delete(@PathParam("id") String id) {
@@ -116,7 +122,8 @@ public class RentOutResource {
     }
     
     
-    /* The method to update a rent out ad with the form method */
+    /* The method to update a rent out ad with the form method 
+       Sends the data to RentOutCollections update method with form*/
     @PUT
     @Path("{id : [a-zA-Z0-9]+}")
     @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
@@ -141,7 +148,8 @@ public class RentOutResource {
     }
     
     
-    /* The method to update a rent out ad with the json method */
+    /* The method to update a rent out ad with the json method 
+       Sends the data to RentOutCollections update method with json*/
     @PUT
     @Path("{id : [a-zA-Z0-9]+}")
     @Consumes({MediaType.APPLICATION_JSON})
