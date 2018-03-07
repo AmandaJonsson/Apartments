@@ -1,7 +1,8 @@
 package dao;
 
 /**
- * @author emilia
+ * Person responsible for class: Emilia Vestlund
+ *
  */
 import javax.persistence.EntityManager;
 
@@ -10,23 +11,26 @@ public abstract class AbstractDAO<TDao, KDao> {
 
     private final Class<TDao> classDao;
    
-    // To be overridden by subclasses
+    // will be overwridde 
     public abstract EntityManager getEntityManager();
-    // This one if for testing outside container
+    // will best tested outside
     public abstract void setEntityManager(EntityManager em);
 
     protected AbstractDAO(Class<TDao> clazzDao) {
+        
         this.classDao = clazzDao;
     }
 
-     // Updated as result
+     // will update the result
     public TDao update(TDao t) {
+
         return getEntityManager().merge(t);
     }
     
     public void create(TDao tdao) {
         getEntityManager().persist(tdao);
-        flush();    // Because of Exceptionhandling (else will get EJBException)
+        //dont know if we need anymore cause we dont have exceptionhandling
+        flush();    
     }
     
     

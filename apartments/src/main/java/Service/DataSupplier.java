@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class DataSupplier {
 
-    /* Adds some data to the rent out table */
+    /* We are Adding some data to the rent out table */
     public static List<RentOut> getRentOuts() {
         List<RentOut> rentouts = new ArrayList<>();
         String[] rentoutsString = {
@@ -26,7 +26,7 @@ public class DataSupplier {
         return rentouts;
     }
     
-    /* Adds some data to the rent table */
+    /* We are Adding some data to the rent table */
     public static List<Rent> getRents() {
         List<Rent> rents = new ArrayList<>();
         String[] rentsString = {

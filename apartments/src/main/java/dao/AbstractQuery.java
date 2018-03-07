@@ -1,16 +1,19 @@
 package dao;
 
 /**
- * @author emilia
+ *  Person responsible for class: Emilia Vestlund
+*
 */
-
+//imports 
 import com.querydsl.core.types.dsl.EntityPathBase;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import java.util.List;
 
 public abstract class AbstractQuery<TDao, KDao> extends AbstractDAO<TDao, KDao>{
 
-    private final EntityPathBase<TDao> queryObject;  // Needed because of QueryDSL
+    
+    //QueryDSL need this 
+    private final EntityPathBase<TDao> queryObject;  
    
     protected AbstractQuery(Class<TDao> clazzDao, EntityPathBase<TDao> queryObject) {
         super(clazzDao);
@@ -29,11 +32,13 @@ public abstract class AbstractQuery<TDao, KDao> extends AbstractDAO<TDao, KDao>{
 
     public List<TDao> findRange(int start, int numberRecords) {
         JPAQueryFactory quaryfactory = new JPAQueryFactory(getEntityManager());
+        
         List<TDao> foundDao = quaryfactory.select(queryObject)
                 .from(queryObject)
                 .offset(start)
                 .limit(numberRecords)
                 .fetch();
+        
         return foundDao;
     }
 

@@ -1,5 +1,12 @@
 <!DOCTYPE html>
+
+
+
+<!-- Emilia Vestlund is resposinble for this page --> 
 <html>
+    <head>   
+        <!-- Head information -->
+        <title>Apartments.com</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,6 +20,7 @@
 <script src="dist/jquery.min.js"></script>
 <script src="dist/bootstrap.min.js"></script>
 <link rel="stylesheet" href="dist/bootstrap.min.css">
+    </head>
 
 <body>
 <!-- Navigation -->
@@ -31,7 +39,8 @@
   </script>
   
   
-  
+  <!-- The slideshows using the w3schools --> 
+
   
 
 <div class="w3-content w3-section" style="width: 100%;">
@@ -39,18 +48,28 @@
   <img class="mySlidesShowPictures w3-animate-fading" src="resources/img/A1.png" style="width:100%">
   <img class="mySlidesShowPictures w3-animate-fading" src="resources/img/A2.jpg" style="width:100%">
   <img class="mySlidesShowPictures w3-animate-fading" src="resources/img/A3.jpg" style="width:100%">
-</div><script>
+</div>
+  
+    <!-- script for the caraousel for the slideshow --> 
+
+  
+  <script>
 var myIndex = 0;
 carousel();
 
 function carousel() {
     var i;
+    //gets all the picture with class myslideshowpictures to show in the slide show
     var pic = document.getElementsByClassName("mySlidesShowPictures");
+        //goes through the pictures and spins it around
+
     for (i = 0; i < pic.length; i++) {
        pic[i].style.display = "none";  
     }
     myIndex++;
-    if (myIndex > pic.length) {myIndex = 1}    
+    if (myIndex > pic.length) {myIndex = 1}  
+            //makes animation for the caraousel, with time 5 sec == 5000
+
     pic[myIndex-1].style.display = "block";  
     setTimeout(carousel, 5000);    
 }
@@ -61,7 +80,7 @@ function carousel() {
  <header>
 
    <h1>Welcome</h1>
-     <p> Welcome to apartments.apartments.com. 
+     <p> Welcome to apartments.com. 
          
      This is a site for you to find apartments to rent our rent out your aparment on. </p>
 
@@ -71,29 +90,21 @@ function carousel() {
   <nav class ="twopage">
     
       <a href="view/Rent.html"><img class="image_shadow" src="resources/img/apartmentwanted.JPG" width="600" height="352" /></a>
-
-        
-</nav>
-    
-    
-    
-   
+  
+  </nav>
+   <!--  I have choose to call the left side for nav and right
+   side for article to split the mup even if 
+   nav is for navigation--> 
     <article>
-        
-      
+
        
     <a href="view/RentOut.html"> <img class="image_shadow" src="For_rent1.png" width="600" height="352" > </a>
 
-    
-   
     
     
     </article>
 
 
-
-
-<!-- main -->
 
 
 

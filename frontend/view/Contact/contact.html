@@ -1,11 +1,19 @@
 <!DOCTYPE html>
+
+<!-- Emilia Vestlund is responsible for this class -->
+
+
+
 <html>
+    <head>   
+        <!-- Head information -->
+        <title>Help</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <link rel="stylesheet" href="contactcss.css" type="text/css"/>
 <link rel="stylesheet" href="../../resources/css/style.css" type="text/css"/>
-
+    </head>
 
 <body>
 <!-- Navigation -->
@@ -16,6 +24,7 @@
   <a href="../Contact/contact.html" class="w3-button w3-bar-item">Contact</a>
   <a href="../Help/help.html" class="w3-button w3-bar-item">Help</a>
 </nav>
+<!-- The popupscript -->
 
 <script>
 function sendForm() {
@@ -58,6 +67,7 @@ function sendForm() {
     
     <h1> Find us on the map </h1>
     <div id="map" style="width:400px;height:400px;background:yellow"></div>
+<!-- The mapscript -->
 
 <script>
 
@@ -79,6 +89,7 @@ var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
 }
 </script>
+<!-- The maps apiadress to google -->
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABe0Gb5phDKQLHoPE3cXX37zKaviLdljw&callback=myMap"></script>
 
@@ -101,7 +112,8 @@ var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     
     
     
-   
+   <!-- The right side of the page -->
+
     <article>
         
             <img src="contact.png" style="width:50%" />
@@ -120,7 +132,8 @@ var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     </ul>
     
     
-    
+       <!-- the contact form -->
+
 <form id="form" name="form" action="">
 
 <fieldset style="width: 600px;">

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
+<!-- Person responsible for the class: Amanda Jonsson -->
+
 <html>
     
-    <head>
+    <head>   
+        <!-- Head information -->
+        <title>Rent</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
@@ -15,28 +19,32 @@
 
         <script type="module" src="./Renttable.js"></script>
         <script type="module" src="../control/RentCtrl.js"></script>
+
     </head>
     
-    <body>
-        <!-- Navigation -->
-        <nav class="w3-bar w3-black">
-          <a href="../index.html" class="w3-button w3-bar-item">Home</a>
-          <a href="Rent.html" class="w3-button w3-bar-item">Rent</a>
-          <a href="RentOut.html" class="w3-button w3-bar-item">Rent out</a>
-          <a href="/view/Contact/contact.html" class="w3-button w3-bar-item">Contact</a>
-          <a href="/view/Help/help.html" class="w3-button w3-bar-item">Help</a>
-        </nav>
 
-    <!-- Header -->
-        <div class="header">
-          <img src="/../resources/img/rent3.jpg" alt="logo" style="width:100%" />
-          <h1>Rent</h1>
-        </div>
+      
+<body>
+<!-- Navigation bar-->
+<nav class="w3-bar w3-black">
+  <a href="../index.html" class="w3-button w3-bar-item">Home</a>
+  <a href="Rent.html" class="w3-button w3-bar-item">Rent</a>
+  <a href="RentOut.html" class="w3-button w3-bar-item">Rent out</a>
+  <a href="/view/Contact/contact.html" class="w3-button w3-bar-item">Contact</a>
+  <a href="/view/Help/help.html" class="w3-button w3-bar-item">Help</a>
+</nav>
 
 
-        <div class ="blue" >
-            <button onclick="window.location.href='/view/addRent.html'" class="button" style="float: right; margin: -50px 0 10px 0;"><span>Add a new ad </span></button>
-        </div>
+<!-- Header -->
+<div class="header">
+  <img src="/../resources/img/rent3.jpg" alt="logo" style="width:100%" />
+  <h1>Rent</h1>
+</div>
+
+            <!-- The button to add a new ad -->
+            <div class ="blue" >
+                <button onclick="window.location.href='/view/addRent.html'" class="button" style="float: right; margin: -50px 0 10px 0;"><span>Add a new ad </span></button>
+            </div>
 
 
         <div class="row">
@@ -84,8 +92,22 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title">Update or Delete?</h4>
 
-                    </div>
 
+<!-- The popup window where you can delete and update a row in the table -->
+
+ <div id="editDeleteModal" class="modal fade">
+                
+                <div class="modal-dialog">
+                    
+                    <div class="modal-content">
+                        
+                        <div class="modal-header">
+                            
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Update or Delete?</h4>
+                            
+                        </div>
+                      
                     <div class="modal-body">
 
                         <form>
