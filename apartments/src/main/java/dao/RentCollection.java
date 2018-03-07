@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 import core.QRent;
@@ -14,29 +9,32 @@ import javax.persistence.PersistenceContext;
 
 
 /**
- *
- * @author tthera
+ * The RentCollection class
+ * Person responsible for class: Amanda Jonsson
  */
 
 @Stateless
 public class RentCollection extends AbstractQuery<Rent, String>{
 
   
+    /* The connection to the persistence file and glassfish */
     @PersistenceContext(unitName ="apartment_persistence")
+    
+    /* The entity manager varible */
     private EntityManager em;
     
-    
+    /* The constructor for the class */
     public RentCollection() {
         super(Rent.class, QRent.rent);
     }
     
-    
+    /* The getter for the entity manager */
     @Override
     public EntityManager getEntityManager() {
         return em;
     }
     
-    
+   /* The setter for the entity manager */
    @Override
     public void setEntityManager(EntityManager em) {
         this.em = em;

@@ -1,6 +1,10 @@
-
+/**
+ * The model for the rent class
+ * Person responsible for class: Amanda Jonsson
+ */
 export class Rent {
     
+    //The constructor for the class
     constructor (id, description,mail, name, phoneNr) {
         this.id = id;
         this.description = description;

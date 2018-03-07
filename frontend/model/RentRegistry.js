@@ -9,7 +9,10 @@ import {
   rentService
 } from "../service/RentService.js"
 
-
+/**
+ * 
+ * Person responsible for class: Amanda Jonsson
+ */
 class RentRegistry {
    
    

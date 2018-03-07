@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package core;
 
 import java.io.Serializable;
@@ -17,8 +12,8 @@ import lombok.Setter;
 import lombok.Getter;
 
 /**
- *
- * @author amandajonsson
+ * The core class for Rent
+ * Person resbonsible for class: Amanda Jonsson
  */
 @NoArgsConstructor
 @EqualsAndHashCode(of = {"id"})
@@ -59,7 +54,7 @@ public class Rent implements Serializable {
         this.phoneNr=phoneNr;
 
     }
-    /* A toString method to write out how a rent out ad should look like */
+    /* A toString method to write out how a rent ad should look like */
     @Override
     public String toString() {
         return "Apartment(To rent out){" + "id = " + id +  
