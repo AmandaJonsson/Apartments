@@ -10,21 +10,26 @@ import {
 } from "../service/RentOutService.js"
 
 
+/**
+ * The model class for the frontend
+ * Person responsible for class: Therese Sturesson
+ */
+
 class RentOutRegistry {
    
-   
+   /* The constructor for the class with test data when not connected to backend */
    constructor() {
        this.rentOuts = [
            new RentOut("OO", "oo", "oo", "oo", "11", "o@com", "ollev")
        ];
     } 
 
-
+    /* Finds a specific rent out ad */
     find(id) {
         return this.rentOuts.find(a => a.id === id);
     }
     
-    
+    /* Finds all rent out ads through rentOutService */
     findAll() {
         rentOutService.findAll(data => {
           this.rentOuts = data;
@@ -32,14 +37,14 @@ class RentOutRegistry {
         });
     }
     
-    
+    /* Creates a new add through rentOutService */
     create(rentOut) {
         rentOutService.create(rentOut, data => {
             return eB.notify("ADD", data);
         }); 
     }
     
-    
+    /* Updates a specific rent out ad through rentOutService */
     update(rentOut) {
         rentOutService.update(rentOut, callback => {
             var a = this.find(rentOut.id);
@@ -48,7 +53,7 @@ class RentOutRegistry {
         });
     }
     
-    
+    /* Deletes a specific rent out add through rentOutService */
     delete(id) {
         rentOutService.delete(id, data => {
            var a = this.find(id);

@@ -1,11 +1,16 @@
+/**
+ * The service file to execute AJAX call to backend
+ * Person responsible for class: Therese Sturesson
+ */
 
 class RentOutService {
     
+    /* The constructor with the connection to the backend */
     constructor() {
         this.baseUrl = "http://localhost:8080/apartments/rest/reOu";
     }
     
-    
+    /* Finds all rent out ads through the backend */
     findAll(callback) {
         window.$.ajax({
             url: this.baseUrl,
@@ -19,7 +24,7 @@ class RentOutService {
         });
     }
     
-    
+    /* Creates a rent out ad through the backend */
     create(rentOut, callback) {
         window.$.ajax({
             url: this.baseUrl,
@@ -35,7 +40,7 @@ class RentOutService {
         });
     }
     
-    
+    /* Finds a specific rent out ad through the backend */
     find(id, callback) {
         $.ajax({
             url: this.baseUrl + "/" + id,
@@ -48,7 +53,7 @@ class RentOutService {
         });
     }
     
-    
+    /* Deletes a specific rent out ad through the backend */
     delete(id, callback) {
         window.$.ajax({
               url: this.baseUrl + "/" + id,
@@ -62,7 +67,7 @@ class RentOutService {
         });
     }
     
-    
+    /* Updates a specific rent out ad through the backend */
     update(rentOut, callback) {
         window.$.ajax({
               url: this.baseUrl + "/" + rentOut.id,

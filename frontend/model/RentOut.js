@@ -1,5 +1,8 @@
 
-/* The model for the rent Out class */
+/**
+ * The model class for the rent out class
+ * Person responsible for class: Therese Sturesson
+ */
 
 export class RentOut {
     

@@ -1,6 +1,4 @@
 
-/* The controller for the rent out html page*/
-
 import {
   reOuReg
 } from "../model/RentOutRegistry.js"
@@ -11,18 +9,22 @@ import {
   eventBus as eB
 } from "../util/eventBus.js"
 
+/**
+ * The controller for the rent out html page
+ * Person responsible for class: Therese Sturesson
+ */
 
 class Listener {
     
 
-    /*  */
+    /* When events from model happens */
     onModelEvent(event, data) {
         var table = $('#rentOut').DataTable();
         table.rows().remove();
         table.rows.add(data).draw();
     }
     
-    /*  */
+    /* When the pop-up window appears */
     showEditDeleteModal(rowData) {
         $("#rid").val(rowData.id);
         $("#radress").val(rowData.adress);
@@ -34,7 +36,7 @@ class Listener {
         $("#editDeleteModal").modal('show');
     }
     
-    /*  */
+    /* When you click on the update button in the pop-up window */
     update() {
         let id = $("#rid").val();
         let adr = $("#radress").val();
@@ -48,14 +50,14 @@ class Listener {
         $("#editDeleteModal").modal('hide');
     }
     
-    /*  */
+    /* When you click on the delete button in the pop-up window */
     delete() {
         let id = $("#rid").val();
         reOuReg.delete(id);
         $("#editDeleteModal").modal('hide');
     }
     
-    /*  */
+    /* When you click on the add button */
     create(e) {
         e.preventDefault();
         let id = $("#id").val();
@@ -72,9 +74,11 @@ class Listener {
     
 }
 
+/* Creates a listener */
 const listener = new Listener();
 eB.register(listener);
 
+/* Listening on the events */
 $(document).ready(function() {
     let table = $('#rentOut').dataTable().api();
     table.on("click", "tbody tr", function(e) {

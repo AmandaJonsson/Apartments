@@ -3,6 +3,12 @@ import {
   reOuReg
 } from "../model/RentOutRegistry.js"
 
+/**
+ * Table for rent outs html page using jQuery Data table
+ * Person responsible for class: Therese Sturesson
+ */
+
+/* The column data definition for the table */
 const columns = [{
     data: "id"
   },
@@ -26,6 +32,7 @@ const columns = [{
   }
 ];
 
+/* Creates and add table when DOM fully constructed */
 $(document).ready(function() {
   let rentOuts = reOuReg.findAll();
   let table = $('#rentOut').DataTable({

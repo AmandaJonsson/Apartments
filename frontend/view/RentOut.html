@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<!-- Person responsible for class: Therese Sturesson -->
+
 <html>
     
     <head>   
@@ -22,9 +24,7 @@
     </head>
 
     
-    
     <body>
-        
         <!-- The navigation bar  -->
         <nav class="w3-bar w3-black">
             <a href="../index.html" class="w3-button w3-bar-item">Home</a>
@@ -34,16 +34,18 @@
             <a href="Help/help.html" class="w3-button w3-bar-item">Help</a>
         </nav>
 
-
+        <!-- The header -->
         <div class="header">
           <img src="../resources/img/rentOutimg.jpg" alt="logo" style="width:100%" />
           <h1>Rent out</h1>
         </div>
 
+        <!-- Button to get to the addRentOut page -->
         <div class ="blue">
             <button onclick="window.location.href='/view/addRentOut.html'" class="button" style="float: right; margin: -50px 0 10px 0;"><span>Add a new ad </span></button>
         </div>
 
+        <!-- The table with rent out ads -->
         <div class="row">
             <div class="col-md-12">
                 <!-- Here the datatable hooks in -->
@@ -81,6 +83,7 @@
             </div>
         </div>
 
+        <!-- Footer -->
         <div class= "footer">
             <p> Apartments.com is developed by: 
                  Amanda Jonsson,  Emilia Vestlund and Therese Sturesson. </p>
@@ -88,6 +91,7 @@
                  apartments@apartments.com</a></p>
         </div>
 
+        <!-- The pop-up window with update and delete -->
         <div id="editDeleteModal" class="modal fade">
 
             <div class="modal-dialog">
