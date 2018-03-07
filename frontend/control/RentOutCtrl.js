@@ -56,7 +56,8 @@ class Listener {
     }
     
     /*  */
-    create() {
+    create(e) {
+        e.preventDefault();
         let id = $("#id").val();
         let adr = $("#adress").val();
         let des = $("#description").val();
@@ -66,6 +67,7 @@ class Listener {
         let img = $("#image").val();
         let reOu = new RentOut(id, adr, des, name, pho, mail, img);
         reOuReg.create(reOu);
+        window.location.href='/view/RentOut.html';
     }
     
 }
@@ -80,5 +82,5 @@ $(document).ready(function() {
     });
     $("#update").on("click", listener.update);
     $("#delete").on("click", listener.delete);
-    $("#add").on("click", listener.create);
+    $("#rentOutForm").on("submit", listener.create);
 });
