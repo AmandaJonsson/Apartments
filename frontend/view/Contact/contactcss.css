@@ -5,10 +5,12 @@ and open the template in the editor.
 */
 /* 
     Created on : 2018-mar-06, 10:04:14
-    Author     : Emilia
+   Responsible for this class: Emilia Vestlund
 */
 
-
+/* 
+    The twopages css
+*/
 
 
 div.contact nav.twopage {
@@ -38,6 +40,8 @@ div.contact article {
     padding: 5em;
     overflow: hidden;
 }
+
+
 .header{
     text-align: center;
 }

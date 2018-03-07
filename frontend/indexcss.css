@@ -5,7 +5,7 @@ and open the template in the editor.
 */
 /* 
     Created on : 2018-mar-06, 10:11:33
-    Author     : Emilia
+   Responsible for this class: Emilia Vestlund
 */
 
 
@@ -46,7 +46,9 @@ header{
 
 
 
-
+/*
+make the picture look animated buttons
+*/
   .image_shadow { 
        
 border-radius: 90px;
