@@ -83,12 +83,12 @@ public class RentOutResource {
        Sends the data to RentOutCollections create method with form*/
     @POST
     @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
-    public Response create(@FormParam("id") String id, @FormParam("adress") String adress,
+    public Response create(@FormParam("id") String id, @FormParam("adress") String adress,@FormParam("room") int room, @FormParam("price") int price,
             @FormParam("description") String description, @FormParam("name") String name,
             @FormParam("phoneNr") int phoneNr, @FormParam("mail") String mail,
             @FormParam("image") String image) {
         
-        RentOut rentOut = new RentOut(id, adress, description, name, phoneNr, mail, image);
+        RentOut rentOut = new RentOut(id, adress, room, price, description, name, phoneNr, mail, image);
         rocoll.create(rentOut);
         URI rentOutUri = uriInfo
                 .getAbsolutePathBuilder()
@@ -127,7 +127,7 @@ public class RentOutResource {
     @PUT
     @Path("{id : [a-zA-Z0-9]+}")
     @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
-    public Response update(@FormParam("id") String id, @FormParam("adress") String adress,
+    public Response update(@FormParam("id") String id, @FormParam("adress") String adress, @FormParam("room") int room, @FormParam("price") int price,
             @FormParam("description") String description, @FormParam("name") String name,
             @FormParam("phoneNr") int phoneNr, @FormParam("mail") String mail,
             @FormParam("image") String image) {
@@ -135,6 +135,8 @@ public class RentOutResource {
         RentOut rentOut = rocoll.find(id);
         if (rentOut != null) {
             rentOut.setAdress(adress);
+            rentOut.setRoom(room);
+            rentOut.setPrice(price);
             rentOut.setDescription(description);
             rentOut.setName(name);
             rentOut.setPhoneNr(phoneNr);
@@ -158,6 +160,8 @@ public class RentOutResource {
         if (b != null) {
             
             b.setAdress(rentOut.getAdress());
+            b.setRoom(rentOut.getRoom());
+            b.setPrice(rentOut.getPrice());
             b.setDescription(rentOut.getDescription());
             b.setName(rentOut.getName());
             b.setPhoneNr(rentOut.getPhoneNr());

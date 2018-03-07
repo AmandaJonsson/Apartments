@@ -39,6 +39,14 @@ public class RentOut implements Serializable {
     
     @Getter
     @Setter
+    private int room;
+    
+    @Getter
+    @Setter
+    private int price;
+    
+    @Getter
+    @Setter
     private String description;
     
     @Getter
@@ -59,10 +67,12 @@ public class RentOut implements Serializable {
     
     
     /* The constructor for the rent out class */
-    public RentOut (String id, String adress, String description, String name,
-            int phoneNr, String mail, String image) {
+    public RentOut (String id, String adress, int room, int price,  String description, 
+            String name, int phoneNr, String mail, String image) {
     this.id = id;
     this.adress = adress;
+    this.room = room;
+    this.price = price;
     this.description = description;
     this.name = name;
     this.phoneNr = phoneNr;
@@ -74,9 +84,10 @@ public class RentOut implements Serializable {
     /* A toString method to write out how a rent out ad should look like */
     @Override
     public String toString() {
-        return "Apartment(To rent out){" + "id = " + id + ", adress = " + adress +  
-            "description=" + description + ", name = " + name + ", phoneNr = " + phoneNr 
-            + ", mail = " + mail + ", image = " + image +"'}'";
+        return "Apartment(To rent out){" + "id = " + id + ", adress = " + adress + 
+            ", room = " + room + ", price = " + price + "description=" + description + 
+            ", name = " + name + ", phoneNr = " + phoneNr + ", mail = " + mail + 
+            ", image = " + image +"'}'";
     }   
 
 }
