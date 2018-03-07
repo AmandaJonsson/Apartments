@@ -32,7 +32,6 @@ class Listener {
     
     
     update() {
-        //console.log("update");
         let id = $("#rid").val();
         let des = $("#rdescription").val();
         let mail = $("#rmail").val();
@@ -41,20 +40,18 @@ class Listener {
         let re = new Rent(id, des, mail, name, pho);
         reReg.update(re);
         $("#editDeleteModal").modal('hide');
-
     }
     
     
     delete() {
-        //console.log("delete");
         let id = $("#rid").val();
         reReg.delete(id);
         $("#editDeleteModal").modal('hide');
     }
     
     
-    create() {
-        //console.log("create");
+    create(e) {
+        e.preventDefault();
         let id = $("#id").val();
         let des = $("#description").val();
         let mail = $("#mail").val();
@@ -62,6 +59,7 @@ class Listener {
         let pho = $("#phoneNr").val();
         let re = new Rent(id, des, mail, name, pho);
         reReg.create(re);
+        window.location.href='/view/Rent.html';
     }
     
 }
@@ -76,5 +74,5 @@ $(document).ready(function() {
     });
     $("#update").on("click", listener.update);
     $("#delete").on("click", listener.delete);
-    $("#add").on("click", listener.create);
+    $("#rentForm").on("submit", listener.create);
 });
