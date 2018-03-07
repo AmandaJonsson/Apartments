@@ -16,11 +16,13 @@ public abstract class AbstractDAO<TDao, KDao> {
     public abstract void setEntityManager(EntityManager em);
 
     protected AbstractDAO(Class<TDao> clazzDao) {
+        
         this.classDao = clazzDao;
     }
 
      // Updated as result
     public TDao update(TDao t) {
+
         return getEntityManager().merge(t);
     }
     

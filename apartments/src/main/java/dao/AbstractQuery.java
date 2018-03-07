@@ -29,11 +29,13 @@ public abstract class AbstractQuery<TDao, KDao> extends AbstractDAO<TDao, KDao>{
 
     public List<TDao> findRange(int start, int numberRecords) {
         JPAQueryFactory quaryfactory = new JPAQueryFactory(getEntityManager());
+        
         List<TDao> foundDao = quaryfactory.select(queryObject)
                 .from(queryObject)
                 .offset(start)
                 .limit(numberRecords)
                 .fetch();
+        
         return foundDao;
     }
 
