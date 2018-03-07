@@ -30,6 +30,7 @@ public class DatabaseResource {
 
     private final Gson gson = new Gson();
 
+    //Recreate database
     
     @GET
     @Produces({MediaType.APPLICATION_JSON})

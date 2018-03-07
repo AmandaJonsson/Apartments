@@ -1,5 +1,8 @@
 package Rest;
 
+ /*
+* Person responsible for class: Emilia Vestlund
+*/
 import static java.lang.System.out;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerResponseContext;
@@ -9,6 +12,10 @@ import javax.ws.rs.ext.Provider;
 @Provider
 public class CORSFilter implements ContainerResponseFilter {
 
+    
+    /*
+** allows us to do httprequests to server
+*/
     @Override
     public void filter(ContainerRequestContext requestContext, ContainerResponseContext response) {
         out.println("**** CORS");
