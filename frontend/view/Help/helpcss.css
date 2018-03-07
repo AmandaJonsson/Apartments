@@ -5,10 +5,12 @@ and open the template in the editor.
 */
 /* 
     Created on : 2018-mar-06, 10:15:16
-    Author     : Emilia
+   Responsible for this class: Emilia Vestlund
 */
 
-
+/*
+two pages
+*/
 div.container {
     width: 100%;
     border: 1px solid gray;
@@ -45,7 +47,9 @@ header{
 
 
 
-
+/*
+article for the help page
+*/
 article img {
     margin-left: 20 px;
 }
@@ -63,7 +67,9 @@ header{
 
 
 
-
+/*
+ the picture has an imageshadow so its looks cooler
+*/
 .image_shadow { 
        
 border-radius: 90px;

@@ -1,5 +1,11 @@
 package Rest;
 
+ /* 
+**Person responsible for class: Emilia Vestlund
+**
+*/
+
+
 import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -13,6 +19,10 @@ public class ApplicationConfig extends Application {
         addRestResourceClasses(resources);
         return resources;
     }
+    /*
+**should not be changed because they are
+** automated populated
+**/
 
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(Rest.CORSFilter.class);
