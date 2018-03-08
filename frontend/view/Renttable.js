@@ -13,6 +13,12 @@ const columns = [{
   {
     data: "description"
   },
+   {
+    data: "price"
+  },
+   {
+    data: "rooms"
+  },
   {
     data: "mail"
   },

@@ -80,11 +80,13 @@ public class RentResource {
     @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
     public Response create(@FormParam("id") String id,
             @FormParam("description") String description,
+            @FormParam("price") int price,
+            @FormParam("rooms") int rooms,
             @FormParam("mail") String mail,
             @FormParam("name") String name,
             @FormParam("phoneNr") int phoneNr){
         
-        Rent rent = new Rent(id, description, mail, name, phoneNr);
+        Rent rent = new Rent(id, description, price, rooms, mail, name, phoneNr);
         rcoll.create(rent);
         URI rentUri = uriInfo
                 .getAbsolutePathBuilder()
@@ -122,6 +124,8 @@ public class RentResource {
     @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
     public Response update(@FormParam("id") String id,
             @FormParam("description") String description,
+            @FormParam("price") int price,
+            @FormParam("rooms") int rooms,
             @FormParam("mail") String mail,
             @FormParam("name") String name,
             @FormParam("phoneNr") int phoneNr){
@@ -130,6 +134,8 @@ public class RentResource {
         Rent rent = rcoll.find(id);
         if (rent != null) {
             rent.setDescription(description);
+            rent.setPrice(price);
+            rent.setRooms(rooms);
             rent.setMail(mail);
             rent.setName(name);
             rent.setPhoneNr(phoneNr);
@@ -149,6 +155,8 @@ public class RentResource {
         Rent b = rcoll.find(rent.getId());
         if (b != null) {
             b.setDescription(rent.getDescription());
+            b.setPrice(rent.getPrice());
+            b.setRooms(rent.getRooms());
             b.setMail(rent.getMail());
             b.setName(rent.getName());
             b.setPhoneNr(rent.getPhoneNr());

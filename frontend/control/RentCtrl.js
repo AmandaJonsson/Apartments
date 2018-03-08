@@ -25,6 +25,8 @@ class Listener {
     showEditDeleteModal(rowData) {
         $("#rid").val(rowData.id);
         $("#rdescription").val(rowData.description);
+         $("#rprice").val(rowData.price);
+        $("#rrooms").val(rowData.rooms);
         $("#rmail").val(rowData.mail);
         $("#rname").val(rowData.name);
         $("#rphoneNr").val(rowData.phoneNr);
@@ -35,10 +37,12 @@ class Listener {
     update() {
         let id = $("#rid").val();
         let des = $("#rdescription").val();
+        let price = $("#rprice").val();
+        let rooms = $("#rrooms").val();
         let mail = $("#rmail").val();
         let name = $("#rname").val();
         let pho = $("#rphoneNr").val();
-        let re = new Rent(id, des, mail, name, pho);
+        let re = new Rent(id, des,price, rooms, mail, name, pho);
         reReg.update(re);
         $("#editDeleteModal").modal('hide');
     }
@@ -57,10 +61,12 @@ class Listener {
         //console.log("create");
         let id = $("#id").val();
         let des = $("#description").val();
+        let price = $("#price").val();
+        let rooms = $("#rooms").val();
         let mail = $("#mail").val();
         let name = $("#name").val();
         let pho = $("#phoneNr").val();
-        let re = new Rent(id, des, mail, name, pho);
+        let re = new Rent(id, des, price, rooms, mail, name, pho);
         reReg.create(re);
         window.location.href='/view/Rent.html';
     }
