@@ -29,8 +29,7 @@ class RentOutService {
         window.$.ajax({
             url: this.baseUrl,
             contentType:"application/json",
-            data: JSON.stringify(rentOut),
-            //data: rentOut, 
+            data: JSON.stringify(rentOut), 
             method: "POST",
             crossDomain: true,
             context: this
@@ -75,7 +74,6 @@ class RentOutService {
               url: this.baseUrl + "/" + rentOut.id,
               contentType:"application/json",
               data: JSON.stringify(rentOut),
-              //data: rentOut,
               method: "PUT",
               crossDomain: true,
               context: this

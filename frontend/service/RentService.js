@@ -28,7 +28,6 @@ class RentService {
             url: this.baseUrl,
             contentType:"application/json",
             data: JSON.stringify(rent),
-            //data: rent, 
             method: "POST",
             crossDomain: true,
             context: this
@@ -73,7 +72,6 @@ class RentService {
               url: this.baseUrl + "/" + rent.id,
               contentType:"application/json",
               data: JSON.stringify(rent),
-              //data: rent,
               method: "PUT",
               crossDomain: true,
               context: this
