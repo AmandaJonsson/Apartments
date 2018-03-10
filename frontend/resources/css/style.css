@@ -127,7 +127,7 @@ td {
   width: 300px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
+  margin: 5px 5px 30px 5px;
 }
 
 .blue button span {
