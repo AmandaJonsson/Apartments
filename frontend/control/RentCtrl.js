@@ -58,7 +58,6 @@ class Listener {
     //Handle events from the gui, create a rent
     create(e) {
         e.preventDefault();
-        //console.log("create");
         let id = $("#id").val();
         let des = $("#description").val();
         let price = $("#price").val();
@@ -67,8 +66,9 @@ class Listener {
         let name = $("#name").val();
         let pho = $("#phoneNr").val();
         let re = new Rent(id, des, price, rooms, mail, name, pho);
-        reReg.create(re);
-        window.location.href='/view/Rent.html';
+        reReg.create(re, function () {
+            window.location.href='/view/Rent.html';
+        });
     }
     
 }

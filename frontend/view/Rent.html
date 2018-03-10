@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="/../resources/css/style.css" type="text/css"/>
 
         <script src="../dist/jquery.min.js"></script>
+        <a href="Rent.html"></a>
         <link rel="stylesheet" href="../dist/bootstrap.min.css">
         <script src="../dist/bootstrap.min.js"></script>
         <script src="../dist/jquery.dataTables.js"></script>
@@ -22,13 +23,10 @@
         <script type="module" src="./Renttable.js"></script>
         <script type="module" src="../control/RentCtrl.js"></script>
         <script>
-function sendForm() {
-  
-        alert ("You sent the renter a message that you had an apartment");
-    
-        
-}
-</script>
+            function sendForm() {
+                    alert ("You sent the renter a message that you had an apartment");   
+            }
+        </script>
     </head>
     
 
@@ -46,7 +44,7 @@ function sendForm() {
 
         <!-- Header -->
         <div class="header">
-            <img src="/../resources/img/rent3.jpg" alt="logo" style="width:100%" />
+            <img src="../resources/img/rent3.jpg" alt="logo" style="width:100%" />
             <h1>Rent</h1>
         </div>
 
@@ -106,31 +104,22 @@ function sendForm() {
 <!-- The popup window where you can delete and update a row in the table -->
 
         <div id="editDeleteModal" class="modal fade">
-                
             <div class="modal-dialog">
-
                 <div class="modal-content">
-
                     <div class="modal-header">
 
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title">Update or Delete or message an renter?</h4>
 
-
                     </div>
-
                     
                     <div class="modal-body">
-                        
-                        
-                        <nav class ="twopage">
-                            
-                            <h1>Admin view</h1>
-                                                                                <p> Do you wanna update or delete you ad?</p>
 
+                        <nav class ="twopage">
+                            <h1 class="h1popup">Admin view</h1>
+                            <p> Do you wanna update or delete you ad?</p>
 
                         <form>
-
                             <div class="form-group">
                                 <p>
                                 <input id="rid" type="text" disabled="true" />
@@ -188,7 +177,7 @@ function sendForm() {
    side for article to split the mup even if 
    nav is for navigation--> 
     <article>
-                                <h1>Guest view</h1>
+                                <h1 class="h1popup">Guest view</h1>
                                 <p> Do you have an apartment to offer to this possible renter?</p>
 <form>
 

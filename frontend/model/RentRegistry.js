@@ -34,9 +34,10 @@ class RentRegistry {
     }
     
     
-    create(rent) {
+    create(rent, callback) {
         rentService.create(rent, data => {
-            return eB.notify("ADD", data);
+            eB.notify("ADD", data);
+            callback();
         }); 
     }
     

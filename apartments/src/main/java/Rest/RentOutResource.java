@@ -11,7 +11,6 @@ import java.util.logging.Logger;
 import javax.ejb.EJB;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
-import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -79,25 +78,6 @@ public class RentOutResource {
     }
     
     
-    /* The method to create a new rent out ad with the form method 
-       Sends the data to RentOutCollections create method with form*/
-    /*@POST
-    @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
-    public Response create(@FormParam("id") String id, @FormParam("adress") String adress,@FormParam("room") int room, @FormParam("price") int price,
-            @FormParam("description") String description, @FormParam("name") String name,
-            @FormParam("phoneNr") int phoneNr, @FormParam("mail") String mail,
-            @FormParam("image") String image) {
-        
-        RentOut rentOut = new RentOut(id, adress, room, price, description, name, phoneNr, mail, image);
-        rocoll.create(rentOut);
-        URI rentOutUri = uriInfo
-                .getAbsolutePathBuilder()
-                .path(String.valueOf(rentOut.getId()))
-                .build(rentOut);
-        return Response.created(rentOutUri).build();
-    }*/
-
-    
     /* The method to create a new rent out ad with the json method 
        Sends the data to RentOutCollections create method with json*/
     @POST
@@ -123,34 +103,6 @@ public class RentOutResource {
     }
     
     
-    /* The method to update a rent out ad with the form method 
-       Sends the data to RentOutCollections update method with form*/
-    /*@PUT
-    @Path("{id : [a-zA-Z0-9]+}")
-    @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
-    public Response update(@FormParam("id") String id, @FormParam("adress") String adress, @FormParam("room") int room, @FormParam("price") int price,
-            @FormParam("description") String description, @FormParam("name") String name,
-            @FormParam("phoneNr") int phoneNr, @FormParam("mail") String mail,
-            @FormParam("image") String image) {
-        System.out.println("id " + id);
-        RentOut rentOut = rocoll.find(id);
-        if (rentOut != null) {
-            rentOut.setAdress(adress);
-            rentOut.setRoom(room);
-            rentOut.setPrice(price);
-            rentOut.setDescription(description);
-            rentOut.setName(name);
-            rentOut.setPhoneNr(phoneNr);
-            rentOut.setMail(mail);
-            rentOut.setImage(image);
-            rocoll.update(rentOut);
-            return Response.ok().build();
-        } else {
-            return Response.status(Response.Status.NOT_FOUND).build();
-        }
-    }*/
-    
-    
     /* The method to update a rent out ad with the json method 
        Sends the data to RentOutCollections update method with json*/
     @PUT
@@ -173,6 +125,5 @@ public class RentOutResource {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
     }
-    
     
 }

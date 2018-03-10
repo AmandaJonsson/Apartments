@@ -24,10 +24,11 @@ class RentService {
     
     // executes a POST AJAX call to the backend
     create(rent, callback) {
-        //console.log(rentOut);
         window.$.ajax({
             url: this.baseUrl,
-            data: rent, 
+            contentType:"application/json",
+            data: JSON.stringify(rent),
+            //data: rent, 
             method: "POST",
             crossDomain: true,
             context: this
@@ -70,7 +71,9 @@ class RentService {
     update(rent, callback) {
         window.$.ajax({
               url: this.baseUrl + "/" + rent.id,
-              data: rent,
+              contentType:"application/json",
+              data: JSON.stringify(rent),
+              //data: rent,
               method: "PUT",
               crossDomain: true,
               context: this
