@@ -16,6 +16,12 @@ const columns = [{
     data: "adress"
   },
   {
+    data: "room"
+  },
+  {
+    data: "price"
+  },
+  {
     data: "description"
   },
   {

@@ -85,9 +85,9 @@ public class RentOut implements Serializable {
     @Override
     public String toString() {
         return "Apartment(To rent out){" + "id = " + id + ", adress = " + adress + 
-            ", room = " + room + ", price = " + price + "description=" + description + 
+            ", room = " + room + ", price = " + price + ", description = " + description + 
             ", name = " + name + ", phoneNr = " + phoneNr + ", mail = " + mail + 
-            ", image = " + image +"'}'";
+            ", image = " + image +"}";
     }   
 
 }

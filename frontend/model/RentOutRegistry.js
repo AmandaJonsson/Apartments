@@ -20,7 +20,7 @@ class RentOutRegistry {
    /* The constructor for the class with test data when not connected to backend */
    constructor() {
        this.rentOuts = [
-           new RentOut("OO", "oo", "oo", "oo", "11", "o@com", "ollev")
+           new RentOut("OO", "oo","2","4000", "oo", "oo", "11", "o@com", "ollev")
        ];
     } 
 
@@ -38,9 +38,10 @@ class RentOutRegistry {
     }
     
     /* Creates a new add through rentOutService */
-    create(rentOut) {
-        rentOutService.create(rentOut, data => {
-            return eB.notify("ADD", data);
+    create(rentOut, callback) {
+        rentOutService.create(rentOut, function(data) {
+           eB.notify("ADD", data);
+           callback();
         }); 
     }
     

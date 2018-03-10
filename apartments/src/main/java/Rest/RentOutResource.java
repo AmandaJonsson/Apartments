@@ -81,7 +81,7 @@ public class RentOutResource {
     
     /* The method to create a new rent out ad with the form method 
        Sends the data to RentOutCollections create method with form*/
-    @POST
+    /*@POST
     @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
     public Response create(@FormParam("id") String id, @FormParam("adress") String adress,@FormParam("room") int room, @FormParam("price") int price,
             @FormParam("description") String description, @FormParam("name") String name,
@@ -95,12 +95,13 @@ public class RentOutResource {
                 .path(String.valueOf(rentOut.getId()))
                 .build(rentOut);
         return Response.created(rentOutUri).build();
-    }
+    }*/
 
     
     /* The method to create a new rent out ad with the json method 
        Sends the data to RentOutCollections create method with json*/
     @POST
+    @Produces({MediaType.APPLICATION_JSON + ";charset=utf-8"})
     @Consumes({MediaType.APPLICATION_JSON})
     public Response create(RentOut rentOut) {
         rocoll.create(rentOut);
@@ -124,7 +125,7 @@ public class RentOutResource {
     
     /* The method to update a rent out ad with the form method 
        Sends the data to RentOutCollections update method with form*/
-    @PUT
+    /*@PUT
     @Path("{id : [a-zA-Z0-9]+}")
     @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
     public Response update(@FormParam("id") String id, @FormParam("adress") String adress, @FormParam("room") int room, @FormParam("price") int price,
@@ -147,7 +148,7 @@ public class RentOutResource {
         } else {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
-    }
+    }*/
     
     
     /* The method to update a rent out ad with the json method 
@@ -158,7 +159,6 @@ public class RentOutResource {
     public Response update(RentOut rentOut) {
         RentOut b = rocoll.find(rentOut.getId());
         if (b != null) {
-            
             b.setAdress(rentOut.getAdress());
             b.setRoom(rentOut.getRoom());
             b.setPrice(rentOut.getPrice());
@@ -167,7 +167,6 @@ public class RentOutResource {
             b.setPhoneNr(rentOut.getPhoneNr());
             b.setMail(rentOut.getMail());
             b.setImage(rentOut.getImage());
-            
             rocoll.update(rentOut);
             return Response.ok().build();
         } else {

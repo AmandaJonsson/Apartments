@@ -10,31 +10,26 @@ curl -v -X OPTIONS http://localhost:8080/
 
 
 For RentOut database:
-# Get all notes (works)
+# Get all notes 
 curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/reOu 
 
-# Get single note (works)
+# Get single note 
 curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/reOu/XX
 
 
-
-# Get primitive type (number of notes) (works)
+# Get primitive type (number of notes) 
 curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/reOu/count
 
 
 
-# Create new using form parameters (works)
-curl -v -X POST  http://localhost:8080/apartments/rest/reOu --data "id=QQ&adress=vägen12&description=apartment&name=Qbert&phoneNr=0000&mail=qson@mail&image=bild"
-
-# Create new using json (works)
-curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/apartments/rest/reOu --data '{"id":"AA", "adress": "vägA", "description": "lägA", "name":"Abert", "phoneNr" : "1111", "mail":"A@g.com", "image" : "imgA"}'
+# Create new using json 
+curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/apartments/rest/reOu --data '{"id":"TT", "adress":"vägA", "room":2, "price":3000, "description": "lägA", "name":"Abert", "phoneNr" : 1111, "mail":"A@g.com", "image" : "imgA"}'
 
 
+# Update a note 
+curl -v -X PUT -H "Content-Type: application/json" http://localhost:8080/apartments/rest/reOu/QQ --data '{"id":"QQ", "adress":"vägQ", "room":4, "price":1500, "description": "lägQ", "name":"Qub", "phoneNr" : "0011", "mail":"Q@g.com", "image" : "imgQ"}'
 
-# Update a note (works)
-curl -v -X PUT -H "Content-Type: application/json" http://localhost:8080/apartments/rest/reOu/QQ --data '{"id":"QQ", "adress": "vägQ", "description": "lägQ", "name":"Qub", "phoneNr" : "0011", "mail":"Q@g.com", "image" : "imgQ"}'
-
-# Delete (works)
+# Delete 
 curl -v -X DELETE http://localhost:8080/apartments/rest/reOu/QQ 
 
 
@@ -43,30 +38,30 @@ curl -v -X DELETE http://localhost:8080/apartments/rest/reOu/QQ
 
 For Rent database:
 
-# Get all notes (works)
+# Get all notes 
 curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/re 
 
-# Get single note (works)
+# Get single note 
 curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/re/AA
 
 
 
-# Get primitive type (number of notes) (works)
+# Get primitive type (number of notes) 
 curl -v -H "Accept: application/json" http://localhost:8080/apartments/rest/re/count
 
 
 
-# Create new using form parameters (works)
+# Create new using form parameters 
 curl -v -X POST  http://localhost:8080/apartments/rest/re --data "id=BB&description=Hej&mail=jaha&name=Amanda&phoneNr=7034"
 
-# Create new using json ()
+# Create new using json 
 curl -v -X POST -H "Content-Type: application/json" http://localhost:8080/apartments/rest/re --data '{"id":"CC", "description":"lagenhet", "mail":"A@gma.com", "name":"Emilia", "phoneNr" :"1111"}'
 
 
-# Update a note ()
+# Update a note 
 curl -v -X PUT -H "Content-Type: application/json" http://localhost:8080/apartments/rest/re/QQ --data '{"id":"BB", "description": "Hejjjjj", "name":"Amanda", "phoneNr" : "7034"}'
 
-# Delete (works)
+# Delete 
 curl -v -X DELETE http://localhost:8080/apartments/rest/re/BB 
 
 

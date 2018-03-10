@@ -28,6 +28,8 @@ class Listener {
     showEditDeleteModal(rowData) {
         $("#rid").val(rowData.id);
         $("#radress").val(rowData.adress);
+        $("#rroom").val(rowData.room);
+        $("#rprice").val(rowData.price);
         $("#rdescription").val(rowData.description);
         $("#rname").val(rowData.name);
         $("#rphoneNr").val(rowData.phoneNr);
@@ -40,12 +42,14 @@ class Listener {
     update() {
         let id = $("#rid").val();
         let adr = $("#radress").val();
+        let rom = $("#rroom").val();
+        let pri = $("#rprice").val();
         let des = $("#rdescription").val();
         let name = $("#rname").val();
         let pho = $("#rphoneNr").val();
         let mail = $("#rmail").val();
         let img = $("#rimage").val();
-        let reOu = new RentOut(id, adr, des, name, pho, mail, img);
+        let reOu = new RentOut(id, adr, rom, pri, des, name, pho, mail, img);
         reOuReg.update(reOu);
         $("#editDeleteModal").modal('hide');
     }
@@ -62,14 +66,17 @@ class Listener {
         e.preventDefault();
         let id = $("#id").val();
         let adr = $("#adress").val();
+        let rom = $("#room").val();
+        let pri = $("#price").val();
         let des = $("#description").val();
         let name = $("#name").val();
         let pho = $("#phoneNr").val();
         let mail = $("#mail").val();
         let img = $("#image").val();
-        let reOu = new RentOut(id, adr, des, name, pho, mail, img);
-        reOuReg.create(reOu);
-        window.location.href='/view/RentOut.html';
+        let reOu = new RentOut(id, adr, rom, pri, des, name, pho, mail, img);
+        reOuReg.create(reOu, function() {
+            window.location.href='/view/RentOut.html';
+        });
     }
     
 }
